@@ -6,6 +6,7 @@ package gov.nist.sip.proxy.gui;
  * Created on April 8, 2002, 10:10 AM
  */
 
+import gov.nist.sip.db.DbConnection;
 import gov.nist.sip.proxy.Configuration;
 import gov.nist.sip.proxy.Proxy;
 import gov.nist.sip.proxy.ProxyDebug;
@@ -23,6 +24,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
@@ -88,9 +91,11 @@ public class ProxyLauncher extends JFrame{
     protected static Color  buttonBackGroundColor=new Color(186,175,175);
    
   
-    public ProxyLauncher(String configFile) {
+    public ProxyLauncher(String configFile) throws SQLException {
         super("NIST-SIP proxy interface");
         System.out.println("Initialisation Proxy Interface");
+       int id  = DbConnection.findUserID("alex");
+       System.out.println("User Id is " + id);
         
         try {
             if (configFile==null) {

@@ -7,6 +7,7 @@ import javax.sip.*;
 import javax.sip.message.*;
 import javax.sip.header.*;
 import javax.sip.address.*;
+
 import gov.nist.sip.proxy.registrar.*;
 import java.text.ParseException;
 import java.io.File;
@@ -16,6 +17,8 @@ import gov.nist.sip.proxy.authentication.*;
 import gov.nist.sip.proxy.presenceserver.*;
 import gov.nist.sip.proxy.router.*;
 import gov.nist.javax.sip.header.*;
+import gov.nist.sip.db.*;
+import gov.nist.sip.block.*;
 
 //ifdef SIMULATION
 /*
@@ -664,6 +667,28 @@ public class Proxy implements SipListener  {
                 		("Proxy, processRequest(), the target set"+
                 				" is the set of the contacts URI from the " +
                 		" location service");
+                	
+                	To to = (To)request.getHeader(ToHeader.NAME);
+                	From from = (From) request.getHeader(FromHeader.NAME);
+                	
+                	String FromUser = from.getUserAtHostPort();
+                	String ToUser = to.getUserAtHostPort();
+                	
+                	StringBuffer sb = new StringBuffer(FromUser);
+            		int endsAt = sb.indexOf("@");
+            		String FromUsername = sb.substring(0, endsAt);
+            		sb = new StringBuffer(ToUser);
+            		endsAt = sb.indexOf("@");
+             		String ToUsername = sb.substring(0, endsAt);
+             		
+               	if (!block.CheckBlock(FromUsername, ToUsername)) {
+                		 Response response=messageFactory.createResponse
+                         (Response.TEMPORARILY_UNAVAILABLE,request);
+                         if (serverTransaction!=null)
+                                serverTransaction.sendResponse(response);
+                         else sipProvider.sendResponse(response);
+                         return;
+                		}
                 /*	
                 	//  ECE355 Changes - Aug. 2005.                
                 	// Call registry  service, get response (uri - wsdl).
