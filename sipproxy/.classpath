@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="lib/nist-sdp-1.0.jar"/>
 	<classpathentry kind="lib" path="lib/nist-sip-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/tracesviewer.jar"/>
+	<classpathentry kind="lib" path="C:/Users/alex/Downloads/postgresql-9.0-801.jdbc4.jar"/>
 	<classpathentry kind="output" path=""/>
 </classpath>
