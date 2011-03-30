@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class DbConnection {
 
-	//connection to the database, url,user and password given
+	// connection to the database, url,user and password given
 	static Connection DbConnection(String url, String user, String password) {
 		try {
 			Class.forName("org.postgresql.Driver");
@@ -16,9 +16,9 @@ public class DbConnection {
 			System.out.println("Could not find the JDBC driver!");
 			System.exit(1);
 		}
-		
+
 		Connection conn = null;
-		
+
 		try {
 			conn = DriverManager.getConnection(url, user, password);
 		} catch (SQLException sqle) {
@@ -29,23 +29,31 @@ public class DbConnection {
 		return conn;
 	}
 
-	//get the connection pointer for every use
-	public static Statement getSql() throws SQLException {	
-		Connection conn = DbConnection("jdbc:postgresql://127.0.0.1:5432/sip_db", "postgres", "root");
+	// get the connection pointer for every use
+	public static Statement getSql() throws SQLException {
+		Connection conn = DbConnection(
+				"jdbc:postgresql://127.0.0.1:5432/sip_db", "postgres", "root");
 		Statement sql = conn.createStatement();
 		return sql;
 	}
-	
-	public static int findUserID(String Username) throws SQLException{
+
+	public static int findUserID(String Username) throws SQLException {
 		Statement sql = getSql();
-		ResultSet result = sql.executeQuery("select * from users where username ='" + Username + "'");
-		
-		if (result != null){
-			result.next();
-			return result.getInt("ID");
-		} else {
+		ResultSet result = null;
+		try {
+			result = sql.executeQuery("select * from users where username ='" + Username + "'");
+			if (result.next()) {
+				int response = result.getInt("ID");
+				result.close();
+				return response;
+			} else {
+				return 0;
+			}
+		} catch (SQLException e) {
+			System.out.println("sql error");
+			e.printStackTrace();
 			return 0;
-		}
+		} 
 	}
-	
+
 }

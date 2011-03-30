@@ -10,6 +10,7 @@ import gov.nist.sip.db.DbConnection;
 import gov.nist.sip.proxy.Configuration;
 import gov.nist.sip.proxy.Proxy;
 import gov.nist.sip.proxy.ProxyDebug;
+import gov.nist.sip.sockets.MultipleSocketServer;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -96,7 +97,10 @@ public class ProxyLauncher extends JFrame{
         System.out.println("Initialisation Proxy Interface");
        int id  = DbConnection.findUserID("alex");
        System.out.println("User Id is " + id);
-        
+       
+       Thread t = new Thread(MultipleSocketServer.main());
+       t.start();
+       
         try {
             if (configFile==null) {
                 throw new Exception("ERROR, specify the configuration file on the"+
