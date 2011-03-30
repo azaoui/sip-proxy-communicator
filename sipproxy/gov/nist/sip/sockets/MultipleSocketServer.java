@@ -1,5 +1,6 @@
 package gov.nist.sip.sockets;
 
+import gov.nist.sip.block.block;
 import gov.nist.sip.db.DbConnection;
 
 import java.io.BufferedOutputStream;
@@ -9,15 +10,22 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import sun.awt.geom.AreaOp.IntOp;
 
 public class MultipleSocketServer implements Runnable {
 
 	private Socket connection;
 	private int ID;
+	private static int BLOCK = 1;
+	private static int UNBLOCK = 2;
+	private static int FORWARD = 3;
+	private static int UNFORWARD = 4;
 
-	public void listenSocket() {
+	public static Runnable main() {
 		int port = 4444;
 		int count = 0;
 
@@ -35,6 +43,7 @@ public class MultipleSocketServer implements Runnable {
 			System.out.println("Accept failed: 4444");
 			System.exit(-1);
 		}
+		return null;
 	}
 
 	MultipleSocketServer(Socket s, int i) {
@@ -45,65 +54,64 @@ public class MultipleSocketServer implements Runnable {
 
 	@Override
 	public void run() {
-		
+
 		try {
-			InputStreamReader isr = new InputStreamReader(connection.getInputStream());
+			InputStreamReader isr = new InputStreamReader(connection
+					.getInputStream());
 			BufferedReader line = new BufferedReader(isr);
-			
+
 			int character;
+			String returnCode;
 			StringBuffer process = new StringBuffer();
 
 			int request = line.read();
 			String FromUser = line.readLine();
 			String ToUser = line.readLine();
-			
+
 			Statement sql = DbConnection.getSql();
-			int ToUserID = DbConnection.findUserID(ToUser);
-			int FromUserID = DbConnection.findUserID(FromUser);
+			int ToUserID = DbConnection.findUserID(FromUser);
+			int FromUserID = DbConnection.findUserID(ToUser);
 			
-			switch (request) {
-			case 01:
-				// block
-				try {
-					sql.executeQuery("insert into block (blocker,blockee) values (" + FromUserID + "," + ToUserID + ")");
-				} catch (SQLException e) {
-					System.out.println("No such user");
-					e.printStackTrace();
-				}
 			
-			case 02:
-				// unblock
-				try {
-					sql.executeQuery("delete from block where blocker = " + FromUserID + " and blockee = " + ToUserID);
-				} catch (SQLException e) {
-					System.out.println("No such user");
-					e.printStackTrace();
-				}
-			case 03:
-				// forward
-				
-			case 04:
-				// unforward
-				try {
-					sql.executeQuery("delete from forward where forwarder = " + FromUserID);
-				} catch (SQLException e) {
-					System.out.println("No such user");
-					e.printStackTrace();
-				}
-			case 05:
-				//other
+			if ((ToUserID == 0) || (FromUserID == 0)) {
+				returnCode = "Either UserFrom or UserTo does not exist.";
+				System.out.println(request);
+				System.out.println(FromUser);
+				System.out.println(ToUser);
+			} else {
+				if (request == BLOCK) {
+					// block
+					block.BlockUser(sql, FromUserID, ToUserID);
+				} else if (request == UNBLOCK) {
+					// unblock
+					block.UnblockUser(sql, FromUserID, ToUserID);
+				} else if (request == FORWARD) {
+					// forward
+				} else if (request == UNFORWARD) {
+					// unforward
+					try {
+						sql.executeUpdate("delete from forward where forwarder = "
+										+ FromUserID);
+					} catch (SQLException e) {
+						System.out.println("No such user");
+						e.printStackTrace();
+					}
+				} else {
+					// other
 
-			}
-			
-			System.out.println(process);
-			// need to wait 10 seconds to pretend that we're processing
-			// something
-			try {
-				Thread.sleep(10000);
-			} catch (Exception e) {
-			}
+				}
 
-			String returnCode = "MultipleSocketServer repsonded at " + request;
+				System.out.println(process);
+				// need to wait 10 seconds to pretend that we're processing
+				// something
+				try {
+					Thread.sleep(10000);
+				} catch (Exception e) {
+				}
+
+				returnCode = "MultipleSocketServer repsonded at " + request;
+			}
+			System.out.println(returnCode);
 			BufferedOutputStream os = new BufferedOutputStream(connection
 					.getOutputStream());
 			OutputStreamWriter osw = new OutputStreamWriter(os, "US-ASCII");
