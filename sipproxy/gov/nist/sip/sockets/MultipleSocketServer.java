@@ -10,22 +10,19 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
-import sun.awt.geom.AreaOp.IntOp;
 
 public class MultipleSocketServer implements Runnable {
 
 	private Socket connection;
 	private int ID;
-	private static int BLOCK = 1;
-	private static int UNBLOCK = 2;
-	private static int FORWARD = 3;
-	private static int UNFORWARD = 4;
+	private static char BLOCK = '1';
+	private static char UNBLOCK = '2';
+	private static char FORWARD = '3';
+	private static char UNFORWARD = '4';
 
-	public static Runnable main() {
+	 public static void main(String[] args) {
 		int port = 4444;
 		int count = 0;
 
@@ -43,10 +40,9 @@ public class MultipleSocketServer implements Runnable {
 			System.out.println("Accept failed: 4444");
 			System.exit(-1);
 		}
-		return null;
 	}
 
-	MultipleSocketServer(Socket s, int i) {
+	public MultipleSocketServer(Socket s, int i) {
 		this.connection = s;
 		this.ID = i;
 
@@ -60,7 +56,6 @@ public class MultipleSocketServer implements Runnable {
 					.getInputStream());
 			BufferedReader line = new BufferedReader(isr);
 
-			int character;
 			String returnCode;
 			StringBuffer process = new StringBuffer();
 
@@ -90,8 +85,7 @@ public class MultipleSocketServer implements Runnable {
 				} else if (request == UNFORWARD) {
 					// unforward
 					try {
-						sql.executeUpdate("delete from forward where forwarder = "
-										+ FromUserID);
+						sql.executeUpdate("delete from forward where forwarder = " + FromUserID);
 					} catch (SQLException e) {
 						System.out.println("No such user");
 						e.printStackTrace();
@@ -104,10 +98,10 @@ public class MultipleSocketServer implements Runnable {
 				System.out.println(process);
 				// need to wait 10 seconds to pretend that we're processing
 				// something
-				try {
-					Thread.sleep(10000);
-				} catch (Exception e) {
-				}
+		//		try {
+		//			Thread.sleep(10000);
+		//		} catch (Exception e) {
+		//		}
 
 				returnCode = "MultipleSocketServer repsonded at " + request;
 			}

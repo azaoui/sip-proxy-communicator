@@ -11,6 +11,7 @@ import gov.nist.sip.proxy.Configuration;
 import gov.nist.sip.proxy.Proxy;
 import gov.nist.sip.proxy.ProxyDebug;
 import gov.nist.sip.sockets.MultipleSocketServer;
+import gov.nist.sip.sockets.StartSocketServer;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -97,9 +98,9 @@ public class ProxyLauncher extends JFrame{
         System.out.println("Initialisation Proxy Interface");
        int id  = DbConnection.findUserID("alex");
        System.out.println("User Id is " + id);
-       
-       Thread t = new Thread(MultipleSocketServer.main());
-       t.start();
+     
+       StartSocketServer s = new StartSocketServer();
+       s.start();
        
         try {
             if (configFile==null) {
