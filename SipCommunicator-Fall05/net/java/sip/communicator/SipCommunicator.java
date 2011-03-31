@@ -74,6 +74,7 @@ import net.java.sip.communicator.sip.security.*;
 import java.io.IOException;
 import net.java.sip.communicator.plugin.setup.*;
 import net.java.sip.communicator.sip.simple.*;
+import net.java.sip.socketclient.RequestSocket;
 
 
 /**
@@ -257,6 +258,7 @@ public class SipCommunicator
     {
         try {
             console.logEntry();
+            
             //timestamp the log
             Calendar cal = GregorianCalendar.getInstance();
             cal.setTimeInMillis(System.currentTimeMillis());

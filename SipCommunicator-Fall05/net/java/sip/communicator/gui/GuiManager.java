@@ -73,6 +73,7 @@ import net.java.sip.communicator.media.JMFRegistry;
 import net.java.sip.communicator.plugin.setup.*;
 import net.java.sip.communicator.gui.imp.*;
 import net.java.sip.communicator.sip.simple.event.*;
+import net.java.sip.socketclient.RequestSocket;
 
 /**
  * <p>Title: SIP COMMUNICATOR</p>
@@ -204,7 +205,7 @@ public class GuiManager
 
     public void showPhoneFrame()
     {
-        phoneFrame.show();
+    	phoneFrame.show();
     }
 
     public void showContactList()
@@ -716,6 +717,11 @@ public class GuiManager
 
         public void actionPerformed(ActionEvent evt)
         {
+        	 RequestSocket req = new RequestSocket();
+             req.listenSocket();
+             if (req != null)
+             	req.SendRequest(RequestSocket.BLOCK, "alex", "thanos");
+             
              JOptionPane.showMessageDialog(null,
                                            new JLabel(new ImageIcon(Utils.getResource("sip-communicator.about.jpg"))),
                                            "SIPphone Anywhere (powered by SIP Communicator)",
