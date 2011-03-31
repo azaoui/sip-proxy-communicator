@@ -107,6 +107,7 @@ public class GuiManager
     private ConfigFrame      configFrame  = null;
     private ArrayList        listeners    = null;
     private AlertManager     alertManager = null;
+    private BlockSplash       blockSplash = null;
 
 /** @todo remove after testing */
 //    private Properties      properties;
@@ -139,6 +140,7 @@ public class GuiManager
         alertManager  = new AlertManager();
         logoPanel     = new JPanel(new FlowLayout(FlowLayout.CENTER));
         interlocutors = new InterlocutorsTableModel();
+        blockSplash = new BlockSplash();
 
         initActionListeners();
         phoneFrame.contactBox.setModel(new ContactsComboBoxModel());
