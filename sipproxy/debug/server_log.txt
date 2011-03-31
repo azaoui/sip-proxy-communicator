@@ -59211,3 +59211,4038 @@ javax.sip.RETRANSMISSION_FILTER= on
  logDescription="nist-proxy"
  name="192.168.1.50" />
 
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564565013" 
+isSender="false" 
+transactionId="z9hg4bk644441657cca7896c744dff304b5fa5e" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK644441657cca7896c744dff304b5fa5e
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564565228" 
+isSender="true" 
+transactionId="z9hg4bk644441657cca7896c744dff304b5fa5e" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK644441657cca7896c744dff304b5fa5e
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="d14b7336dfbbac4230d450aca3c63b80",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564568146" 
+isSender="false" 
+transactionId="z9hg4bk66941baf5dcabe0c18de4e8c9c325ac5" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="269" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK66941baf5dcabe0c18de4e8c9c325ac5
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="d14b7336dfbbac4230d450aca3c63b80",uri="sip:192.168.1.50:5061;transport=udp",response="c77ccaca4aa2eb77de66a4a49d0574ee",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564568160" 
+isSender="true" 
+transactionId="z9hg4bk66941baf5dcabe0c18de4e8c9c325ac5" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="325" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK66941baf5dcabe0c18de4e8c9c325ac5
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="54fe8f19d9224d8441164c486d6eef34",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564570591" 
+isSender="false" 
+transactionId="z9hg4bke3ebb2b4ccf20f254ec2e80ba16019aa" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="429" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe3ebb2b4ccf20f254ec2e80ba16019aa
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="54fe8f19d9224d8441164c486d6eef34",uri="sip:192.168.1.50:5061;transport=udp",response="0597eb3172148115d4c0e803d8bc4d01",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564570607" 
+isSender="true" 
+transactionId="z9hg4bke3ebb2b4ccf20f254ec2e80ba16019aa" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="493" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe3ebb2b4ccf20f254ec2e80ba16019aa
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="ab855de960c48818cbcea05583c1ef72",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564573222" 
+isSender="false" 
+transactionId="z9hg4bkb9a3b7e48fee205b4b11e493b865eb01" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="597" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 4 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKb9a3b7e48fee205b4b11e493b865eb01
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="ab855de960c48818cbcea05583c1ef72",uri="sip:192.168.1.50:5061;transport=udp",response="f13e634c4eb5c7e8e6f6c13d30516261",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564573234" 
+isSender="true" 
+transactionId="z9hg4bkb9a3b7e48fee205b4b11e493b865eb01" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="661" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 4 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKb9a3b7e48fee205b4b11e493b865eb01
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="21625ee4481707f0835a7768b337d894",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564584822" 
+isSender="false" 
+transactionId="z9hg4bk30a6b3ad92586d67c16dde315f221ed4" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="765" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 5 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK30a6b3ad92586d67c16dde315f221ed4
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="21625ee4481707f0835a7768b337d894",uri="sip:192.168.1.50:5061;transport=udp",response="5c70f0c02239e8520299bc26fb47701e",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564584851" 
+isSender="true" 
+transactionId="z9hg4bk30a6b3ad92586d67c16dde315f221ed4" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="829" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 5 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK30a6b3ad92586d67c16dde315f221ed4
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564627163" 
+isSender="false" 
+transactionId="z9hg4bk788cc76dafc4d77e6f62a913b08785db" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="931" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK788cc76dafc4d77e6f62a913b08785db
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564627175" 
+isSender="true" 
+transactionId="z9hg4bk788cc76dafc4d77e6f62a913b08785db" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="994" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK788cc76dafc4d77e6f62a913b08785db
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="e81d5a7fd3a23f0456ca46d7b16a2854",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301564627185" 
+isSender="false" 
+transactionId="z9hg4bkbc0f469ea3694a2b5c229771e829bd2a" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1098" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKbc0f469ea3694a2b5c229771e829bd2a
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="e81d5a7fd3a23f0456ca46d7b16a2854",uri="sip:192.168.1.50:5061;transport=udp",response="179cf46137325803846a8371b381ba1a",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301564627222" 
+isSender="true" 
+transactionId="z9hg4bkbc0f469ea3694a2b5c229771e829bd2a" 
+callId="d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="1162" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: d17dc7f3e3686d7ce3752927ac5670a4@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKbc0f469ea3694a2b5c229771e829bd2a
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=28890871
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567307167" 
+isSender="false" 
+transactionId="z9hg4bk1b28f3f4c59cdbdbd1ef8c8fb3b78073" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1264" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK1b28f3f4c59cdbdbd1ef8c8fb3b78073
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567307249" 
+isSender="true" 
+transactionId="z9hg4bk1b28f3f4c59cdbdbd1ef8c8fb3b78073" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1327" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK1b28f3f4c59cdbdbd1ef8c8fb3b78073
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="210bd96f46db546ebc53e91a0e607d5f",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567309160" 
+isSender="false" 
+transactionId="z9hg4bka74a8e53783da524316f80838e468c42" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1431" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa74a8e53783da524316f80838e468c42
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="210bd96f46db546ebc53e91a0e607d5f",uri="sip:192.168.1.50:5061;transport=udp",response="1eafc4bb9c956ad22f89d0d9589e4b5b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567309174" 
+isSender="true" 
+transactionId="z9hg4bka74a8e53783da524316f80838e468c42" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1495" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa74a8e53783da524316f80838e468c42
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="ff83e6c76b9324dacb64833daea007b0",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567311352" 
+isSender="false" 
+transactionId="z9hg4bk8d6b24fc367f79a2af541bef03273038" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1599" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK8d6b24fc367f79a2af541bef03273038
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="ff83e6c76b9324dacb64833daea007b0",uri="sip:192.168.1.50:5061;transport=udp",response="b93e097c0c50d7c7475bc77b5463ba6d",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567311367" 
+isSender="true" 
+transactionId="z9hg4bk8d6b24fc367f79a2af541bef03273038" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1663" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK8d6b24fc367f79a2af541bef03273038
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="8c64556ba249f3c1bf5f727cf77dcd6f",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567314389" 
+isSender="false" 
+transactionId="z9hg4bk25a4136cd4754ef3e3a46c76cc0aaea1" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1767" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 4 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK25a4136cd4754ef3e3a46c76cc0aaea1
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="8c64556ba249f3c1bf5f727cf77dcd6f",uri="sip:192.168.1.50:5061;transport=udp",response="c09a2ed29332095d2d4edb7775afc228",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567314402" 
+isSender="true" 
+transactionId="z9hg4bk25a4136cd4754ef3e3a46c76cc0aaea1" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1831" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 4 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK25a4136cd4754ef3e3a46c76cc0aaea1
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="27b58c57e915e0609f0e7308bf8cea41",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567316453" 
+isSender="false" 
+transactionId="z9hg4bk4f0ef31ff9ca50cf0c6903ac118067f9" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="1938" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 5 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4f0ef31ff9ca50cf0c6903ac118067f9
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="27b58c57e915e0609f0e7308bf8cea41",uri="sip:192.168.1.50:5061;transport=udp",response="b5286cc1a660fad159681993d50b4d62",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567316475" 
+isSender="true" 
+transactionId="z9hg4bk4f0ef31ff9ca50cf0c6903ac118067f9" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1999" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 5 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4f0ef31ff9ca50cf0c6903ac118067f9
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="4ccc3b6894e6beebdd0d5c0c6a2d6a46",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567318011" 
+isSender="false" 
+transactionId="z9hg4bk061b745a9c93c788dd42a0b0778c1b67" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2111" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 6 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK061b745a9c93c788dd42a0b0778c1b67
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="4ccc3b6894e6beebdd0d5c0c6a2d6a46",uri="sip:192.168.1.50:5061;transport=udp",response="77221aca36fb84e63858109c182da3c4",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567318024" 
+isSender="true" 
+transactionId="z9hg4bk061b745a9c93c788dd42a0b0778c1b67" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2167" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 6 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK061b745a9c93c788dd42a0b0778c1b67
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="6ab6f0db06dfa5c84518c343585acd50",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567319563" 
+isSender="false" 
+transactionId="z9hg4bkff178af5133a3ee11f1159aacbc64399" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2274" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 7 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKff178af5133a3ee11f1159aacbc64399
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="6ab6f0db06dfa5c84518c343585acd50",uri="sip:192.168.1.50:5061;transport=udp",response="3454f064dcf42ed271ea26e76119bae4",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567319576" 
+isSender="true" 
+transactionId="z9hg4bkff178af5133a3ee11f1159aacbc64399" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2335" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 7 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKff178af5133a3ee11f1159aacbc64399
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="05ab20b2395c42615ef61c8e1abe7834",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567321242" 
+isSender="false" 
+transactionId="z9hg4bk548b72609accbbea6130bd7dfb801e0f" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2439" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 8 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK548b72609accbbea6130bd7dfb801e0f
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="05ab20b2395c42615ef61c8e1abe7834",uri="sip:192.168.1.50:5061;transport=udp",response="977445c6f9a06eac368ea5e1fb6c0906",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567321255" 
+isSender="true" 
+transactionId="z9hg4bk548b72609accbbea6130bd7dfb801e0f" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2503" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 8 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK548b72609accbbea6130bd7dfb801e0f
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="6f66bdeed572cd8d77cf41ed6b444a35",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567322956" 
+isSender="false" 
+transactionId="z9hg4bk6f6f0e2a578341487f092ee234a11b0f" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2607" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 9 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK6f6f0e2a578341487f092ee234a11b0f
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="6f66bdeed572cd8d77cf41ed6b444a35",uri="sip:192.168.1.50:5061;transport=udp",response="ba7f827d7646a1e49d741ea11ed81867",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567322973" 
+isSender="true" 
+transactionId="z9hg4bk6f6f0e2a578341487f092ee234a11b0f" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2671" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 9 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK6f6f0e2a578341487f092ee234a11b0f
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="5ac7fd0201fffb8b1c606e9c002a6312",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567324908" 
+isSender="false" 
+transactionId="z9hg4bk205549f269b8783c76967df6d3edda0d" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2776" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 10 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK205549f269b8783c76967df6d3edda0d
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="5ac7fd0201fffb8b1c606e9c002a6312",uri="sip:192.168.1.50:5061;transport=udp",response="831e853ad029177a7ba71d12dfa4171a",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567324920" 
+isSender="true" 
+transactionId="z9hg4bk205549f269b8783c76967df6d3edda0d" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2839" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 10 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK205549f269b8783c76967df6d3edda0d
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="a37237b725f118fefabd52e3b0ae4ec7",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567327123" 
+isSender="false" 
+transactionId="z9hg4bkc67a17d0c78e07d2af67438fe3e2095e" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2943" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 11 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc67a17d0c78e07d2af67438fe3e2095e
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="a37237b725f118fefabd52e3b0ae4ec7",uri="sip:192.168.1.50:5061;transport=udp",response="6eddaf7056737c9920ac0354eea2cb48",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567327135" 
+isSender="true" 
+transactionId="z9hg4bkc67a17d0c78e07d2af67438fe3e2095e" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3007" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 11 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc67a17d0c78e07d2af67438fe3e2095e
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="1be59b17580c2d3b6e658afdf3387b81",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567328949" 
+isSender="false" 
+transactionId="z9hg4bke95325a041b95cc65679a66afd74d39e" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3114" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 12 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe95325a041b95cc65679a66afd74d39e
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="1be59b17580c2d3b6e658afdf3387b81",uri="sip:192.168.1.50:5061;transport=udp",response="31d8dd3696700ee4ec32e283bf29a8b3",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567328962" 
+isSender="true" 
+transactionId="z9hg4bke95325a041b95cc65679a66afd74d39e" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3175" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 12 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe95325a041b95cc65679a66afd74d39e
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="bc7759c5d3448c3fbbbfcc11d355c533",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567330519" 
+isSender="false" 
+transactionId="z9hg4bk11f131e24902d7d2a330e2f2911f718a" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3287" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 13 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK11f131e24902d7d2a330e2f2911f718a
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="bc7759c5d3448c3fbbbfcc11d355c533",uri="sip:192.168.1.50:5061;transport=udp",response="64e0140b527aaa04601e54f0bd3891ae",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567330532" 
+isSender="true" 
+transactionId="z9hg4bk11f131e24902d7d2a330e2f2911f718a" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3343" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 13 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK11f131e24902d7d2a330e2f2911f718a
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="989589e76699c24e770c4c28803d5350",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567332066" 
+isSender="false" 
+transactionId="z9hg4bk3304bacd2b6eeb019929239ddf730db1" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3453" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 14 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK3304bacd2b6eeb019929239ddf730db1
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="989589e76699c24e770c4c28803d5350",uri="sip:192.168.1.50:5061;transport=udp",response="7b3f772d60070995d1b9f4d238bb2122",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567332079" 
+isSender="true" 
+transactionId="z9hg4bk3304bacd2b6eeb019929239ddf730db1" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3511" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 14 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK3304bacd2b6eeb019929239ddf730db1
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="d7b094c900c6923567c9253e45af796d",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567334626" 
+isSender="false" 
+transactionId="z9hg4bke793827d17c322d95fee635380ca1710" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3615" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 15 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe793827d17c322d95fee635380ca1710
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="d7b094c900c6923567c9253e45af796d",uri="sip:192.168.1.50:5061;transport=udp",response="89854c43a423290d1489c875999377b5",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567334639" 
+isSender="true" 
+transactionId="z9hg4bke793827d17c322d95fee635380ca1710" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3679" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 15 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKe793827d17c322d95fee635380ca1710
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Proxy-Authenticate: Digest realm="nist.gov",nonce="4d82210c27340d3150058aa1485260db",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567342824" 
+isSender="false" 
+transactionId="z9hg4bkf69213c2ff7bad76d98d58ba4ea45232" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3783" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 16 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKf69213c2ff7bad76d98d58ba4ea45232
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="4d82210c27340d3150058aa1485260db",uri="sip:192.168.1.50:5061;transport=udp",response="755b20eb648b94fbf639743932c82910",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567342860" 
+isSender="true" 
+transactionId="z9hg4bkf69213c2ff7bad76d98d58ba4ea45232" 
+callId="87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="3847" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 87a84600cf09cec4edf41e9b7e9b3714@192.168.1.50
+CSeq: 16 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKf69213c2ff7bad76d98d58ba4ea45232
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567484214" 
+isSender="false" 
+transactionId="z9hg4bkc3cd0bcf592313e4b2ece354283bbeec" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3949" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc3cd0bcf592313e4b2ece354283bbeec
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567484220" 
+isSender="true" 
+transactionId="z9hg4bkc3cd0bcf592313e4b2ece354283bbeec" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="4012" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc3cd0bcf592313e4b2ece354283bbeec
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="861ec851a07ee32449b758422535a935",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567486262" 
+isSender="false" 
+transactionId="z9hg4bk209192937954adb4314553b08cbe32b4" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="4116" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK209192937954adb4314553b08cbe32b4
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="861ec851a07ee32449b758422535a935",uri="sip:192.168.1.50:5061;transport=udp",response="f7ce33dc1de95f655878faacdde3847c",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567486287" 
+isSender="false" 
+transactionId="z9hg4bk209192937954adb4314553b08cbe32b4" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="4228" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK209192937954adb4314553b08cbe32b4
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="861ec851a07ee32449b758422535a935",uri="sip:192.168.1.50:5061;transport=udp",response="f7ce33dc1de95f655878faacdde3847c",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567486292" 
+isSender="true" 
+transactionId="z9hg4bk209192937954adb4314553b08cbe32b4" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4284" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK209192937954adb4314553b08cbe32b4
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567486326" 
+isSender="true" 
+transactionId="z9hg4bk209192937954adb4314553b08cbe32b4" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4348" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK209192937954adb4314553b08cbe32b4
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567533415" 
+isSender="false" 
+transactionId="z9hg4bk88034a0cad71bbd31e1f5c71f877aea7" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="4450" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK88034a0cad71bbd31e1f5c71f877aea7
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567533424" 
+isSender="true" 
+transactionId="z9hg4bk88034a0cad71bbd31e1f5c71f877aea7" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="4513" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK88034a0cad71bbd31e1f5c71f877aea7
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="74095361b271922d56e3322648bce567",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567535376" 
+isSender="false" 
+transactionId="z9hg4bk9a50997720ba806fd706af91dc558e8e" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="4617" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK9a50997720ba806fd706af91dc558e8e
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="74095361b271922d56e3322648bce567",uri="sip:192.168.1.50:5061;transport=udp",response="95aaf69a5ccccb4aa7dffad32fcd5474",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567535405" 
+isSender="true" 
+transactionId="z9hg4bk9a50997720ba806fd706af91dc558e8e" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="4681" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK9a50997720ba806fd706af91dc558e8e
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567563502" 
+isSender="false" 
+transactionId="z9hg4bk46a142246a45170cec7443b603216bd4" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="4792" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK46a142246a45170cec7443b603216bd4
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567563547" 
+isSender="true" 
+transactionId="z9hg4bk46a142246a45170cec7443b603216bd4" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="4855" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK46a142246a45170cec7443b603216bd4
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="ad335ae3ff9febecb18c9d6e02974912",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567563554" 
+isSender="false" 
+transactionId="z9hg4bk46a142246a45170cec7443b603216bd4" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="4900" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK46a142246a45170cec7443b603216bd4
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567563564" 
+isSender="false" 
+transactionId="z9hg4bkd4ded930ea9dee87be2749c5cb4a1bac" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5052" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKd4ded930ea9dee87be2749c5cb4a1bac
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="ad335ae3ff9febecb18c9d6e02974912",uri="sip:thanos@192.168.1.50:4000",response="586dfb3751558622c5575c37724e94e4",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567563779" 
+isSender="true" 
+transactionId="z9hg4bkd4ded930ea9dee87be2749c5cb4a1bac" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="5162" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKd4ded930ea9dee87be2749c5cb4a1bac
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567564006" 
+isSender="true" 
+transactionId="z9hg4bkd4ded930ea9dee87be2749c5cb4a1bac" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="SIP/2.0 480 Temporarily Unavailable" 
+debugLine="5245" 
+>
+<![CDATA[SIP/2.0 480 Temporarily Unavailable
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKd4ded930ea9dee87be2749c5cb4a1bac
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567564014" 
+isSender="false" 
+transactionId="z9hg4bkd4ded930ea9dee87be2749c5cb4a1bac" 
+callId="faea502d10eaf3461e7e6160bd896b00@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5304" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: faea502d10eaf3461e7e6160bd896b00@192.168.1.50
+CSeq: 2 ACK
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKd4ded930ea9dee87be2749c5cb4a1bac
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567581607" 
+isSender="false" 
+transactionId="z9hg4bk95edb2b98d3773d0e892b4ba34bff968" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5429" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK95edb2b98d3773d0e892b4ba34bff968
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567581615" 
+isSender="true" 
+transactionId="z9hg4bk95edb2b98d3773d0e892b4ba34bff968" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="5489" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK95edb2b98d3773d0e892b4ba34bff968
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="df003b026bcdf6449bd905ce528336a3",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567581622" 
+isSender="false" 
+transactionId="z9hg4bk95edb2b98d3773d0e892b4ba34bff968" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5592" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK95edb2b98d3773d0e892b4ba34bff968
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567581632" 
+isSender="false" 
+transactionId="z9hg4bkea7d845e2ac3018a03bdb9d35f2364fc" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5712" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKea7d845e2ac3018a03bdb9d35f2364fc
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="df003b026bcdf6449bd905ce528336a3",uri="sip:thanos@192.168.1.50:4000",response="bdf359a97002c614574ecadd68d86a88",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567581853" 
+isSender="true" 
+transactionId="z9hg4bkea7d845e2ac3018a03bdb9d35f2364fc" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="5822" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKea7d845e2ac3018a03bdb9d35f2364fc
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567582015" 
+isSender="true" 
+transactionId="z9hg4bkea7d845e2ac3018a03bdb9d35f2364fc" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="SIP/2.0 480 Temporarily Unavailable" 
+debugLine="5905" 
+>
+<![CDATA[SIP/2.0 480 Temporarily Unavailable
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKea7d845e2ac3018a03bdb9d35f2364fc
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567582019" 
+isSender="false" 
+transactionId="z9hg4bkea7d845e2ac3018a03bdb9d35f2364fc" 
+callId="7b43b400980d92231de3b73f4a33360e@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="5964" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 7b43b400980d92231de3b73f4a33360e@192.168.1.50
+CSeq: 2 ACK
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKea7d845e2ac3018a03bdb9d35f2364fc
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567596269" 
+isSender="false" 
+transactionId="z9hg4bka643db5c3ebfa29135fbece6e4a88266" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="INVITE sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="6086" 
+>
+<![CDATA[INVITE sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa643db5c3ebfa29135fbece6e4a88266
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567596275" 
+isSender="true" 
+transactionId="z9hg4bka643db5c3ebfa29135fbece6e4a88266" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="6149" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa643db5c3ebfa29135fbece6e4a88266
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="ecdeed168140d8fee4ade515ce57d6b8",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567596285" 
+isSender="false" 
+transactionId="z9hg4bka643db5c3ebfa29135fbece6e4a88266" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="ACK sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="6252" 
+>
+<![CDATA[ACK sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa643db5c3ebfa29135fbece6e4a88266
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567596294" 
+isSender="false" 
+transactionId="z9hg4bk4056f38988fa6248d0469aa5a0a511eb" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="INVITE sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="6372" 
+>
+<![CDATA[INVITE sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="ecdeed168140d8fee4ade515ce57d6b8",uri="sip:alex@192.168.1.50:4000",response="1ce9b6d466e97393823514bceacbab70",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567596507" 
+isSender="true" 
+transactionId="z9hg4bk4056f38988fa6248d0469aa5a0a511eb" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="6482" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567596729" 
+isSender="true" 
+transactionId="z9hg4bka5c6c72f2f2931a22bfc1ae2ca028798" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="INVITE sip:192.168.1.50:22787 SIP/2.0" 
+debugLine="6606" 
+>
+<![CDATA[INVITE sip:192.168.1.50:22787 SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bKa5c6c72f2f2931a22bfc1ae2ca028798,SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="ecdeed168140d8fee4ade515ce57d6b8",uri="sip:alex@192.168.1.50:4000",response="1ce9b6d466e97393823514bceacbab70",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567596948" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bka5c6c72f2f2931a22bfc1ae2ca028798" 
+firstLine="SIP/2.0 100 Trying" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+debugLine="6663" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bKa5c6c72f2f2931a22bfc1ae2ca028798,SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567597029" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bka5c6c72f2f2931a22bfc1ae2ca028798" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+debugLine="6780" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bKa5c6c72f2f2931a22bfc1ae2ca028798,SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567597035" 
+isSender="true" 
+transactionId="z9hg4bk4056f38988fa6248d0469aa5a0a511eb" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="6889" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567604797" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bka5c6c72f2f2931a22bfc1ae2ca028798" 
+firstLine="SIP/2.0 200 OK" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+debugLine="7017" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bKa5c6c72f2f2931a22bfc1ae2ca028798,SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Type: application/sdp
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567604807" 
+isSender="true" 
+transactionId="z9hg4bk4056f38988fa6248d0469aa5a0a511eb" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="7170" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK4056f38988fa6248d0469aa5a0a511eb
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Record-Route: <sip:192.168.1.50:4000>
+Content-Type: application/sdp
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567604825" 
+isSender="false" 
+transactionId="991421599" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="7296" 
+>
+<![CDATA[ACK sip:192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 ACK
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=39322e3136382e312e35303a3530363
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Route: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567605944" 
+isSender="true" 
+transactionId="z9hg4bk2e7a4c3c1f4e6941d06b409bd963b8d0" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:22787 SIP/2.0" 
+debugLine="7531" 
+>
+<![CDATA[ACK sip:192.168.1.50:22787 SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 ACK
+To: <sip:alex@192.168.1.50:4000>;tag=28523022
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK2e7a4c3c1f4e6941d06b409bd963b8d0,SIP/2.0/UDP 192.168.1.50:5060;branch=39322e3136382e312e35303a3530363
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Route: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567640232" 
+isSender="false" 
+transactionId="z9hg4bk29ab44a11f39bd0c2bfee5ebdac9027e" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="BYE sip:alex@192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="7652" 
+>
+<![CDATA[BYE sip:alex@192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 BYE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK29ab44a11f39bd0c2bfee5ebdac9027e
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567640279" 
+isSender="true" 
+transactionId="z9hg4bk29ab44a11f39bd0c2bfee5ebdac9027e" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="7713" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 2 BYE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK29ab44a11f39bd0c2bfee5ebdac9027e
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="cc241400830496d3198dcd64165ba719",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567671926" 
+isSender="false" 
+transactionId="z9hg4bkc5c82701541dab566f3eac621b8376df" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="7824" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKc5c82701541dab566f3eac621b8376df
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567671936" 
+isSender="true" 
+transactionId="z9hg4bkc5c82701541dab566f3eac621b8376df" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="7887" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKc5c82701541dab566f3eac621b8376df
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="975ceccba60ed9f9cbd98b1895a9e385",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567671940" 
+isSender="false" 
+transactionId="z9hg4bkc5c82701541dab566f3eac621b8376df" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="7990" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKc5c82701541dab566f3eac621b8376df
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567671947" 
+isSender="false" 
+transactionId="z9hg4bk7f78e987c666702608195a12ed320fe2" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="8114" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK7f78e987c666702608195a12ed320fe2
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="975ceccba60ed9f9cbd98b1895a9e385",uri="sip:thanos@192.168.1.50:4000",response="57af7aeedeb93de89908ec06b6e644e9",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567672158" 
+isSender="true" 
+transactionId="z9hg4bk7f78e987c666702608195a12ed320fe2" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="8220" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK7f78e987c666702608195a12ed320fe2
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567672291" 
+isSender="true" 
+transactionId="z9hg4bk7f78e987c666702608195a12ed320fe2" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="SIP/2.0 480 Temporarily Unavailable" 
+debugLine="8303" 
+>
+<![CDATA[SIP/2.0 480 Temporarily Unavailable
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK7f78e987c666702608195a12ed320fe2
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567672296" 
+isSender="false" 
+transactionId="z9hg4bk7f78e987c666702608195a12ed320fe2" 
+callId="1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="8362" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 1c0993554cdbf0b3a773940f9dbb7067@192.168.1.50
+CSeq: 2 ACK
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK7f78e987c666702608195a12ed320fe2
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567675378" 
+isSender="false" 
+transactionId="z9hg4bkf9874348683ffde6af158ead567c7383" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="BYE sip:192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="8488" 
+>
+<![CDATA[BYE sip:192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 1 BYE
+From: <sip:alex@192.168.1.50:4000>;tag=28523022
+Max-Forwards: 69
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKf9874348683ffde6af158ead567c7383
+Route: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567675386" 
+isSender="true" 
+transactionId="z9hg4bkf9874348683ffde6af158ead567c7383" 
+callId="c646067a751b1e367e09e05079987e47@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="8567" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: c646067a751b1e367e09e05079987e47@192.168.1.50
+CSeq: 1 BYE
+From: <sip:alex@192.168.1.50:4000>;tag=28523022
+Max-Forwards: 69
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKf9874348683ffde6af158ead567c7383
+Proxy-Authenticate: Digest realm="nist.gov",nonce="3db70542096932fca861280b2f9a8d36",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567675389" 
+isSender="false" 
+transactionId="z9hg4bk2847edbc52ad9980853df6d77ce92acb" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="8670" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK2847edbc52ad9980853df6d77ce92acb
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567675394" 
+isSender="true" 
+transactionId="z9hg4bk2847edbc52ad9980853df6d77ce92acb" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="8733" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bK2847edbc52ad9980853df6d77ce92acb
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="dc2c512db3ebb370dff70801f3cc881f",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:22787" 
+to="192.168.1.50:4000" 
+time="1301567675407" 
+isSender="false" 
+transactionId="z9hg4bkbda79bd9d905c233d82ad6d6acf5cd1c" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="8837" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKbda79bd9d905c233d82ad6d6acf5cd1c
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:22787;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="dc2c512db3ebb370dff70801f3cc881f",uri="sip:192.168.1.50:5061;transport=udp",response="b5feba26367d74512563bb883ca9deef",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:22787" 
+time="1301567675486" 
+isSender="true" 
+transactionId="z9hg4bkbda79bd9d905c233d82ad6d6acf5cd1c" 
+callId="158087bd6f6518460c3b2005fe221e0a@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="8901" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 158087bd6f6518460c3b2005fe221e0a@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:22787;branch=z9hG4bKbda79bd9d905c233d82ad6d6acf5cd1c
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=24166053
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567708991" 
+isSender="false" 
+transactionId="z9hg4bkf9086b3adfe6005baee082dd268de4f9" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="9045" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKf9086b3adfe6005baee082dd268de4f9
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567709000" 
+isSender="true" 
+transactionId="z9hg4bkf9086b3adfe6005baee082dd268de4f9" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="9108" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKf9086b3adfe6005baee082dd268de4f9
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="54141e1e90e5446b7e720c9eb97d34f0",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567710989" 
+isSender="false" 
+transactionId="z9hg4bkdb16b8b9db018f22ad4d3b1f0cd84159" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="9213" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKdb16b8b9db018f22ad4d3b1f0cd84159
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="54141e1e90e5446b7e720c9eb97d34f0",uri="sip:192.168.1.50:5061;transport=udp",response="507a25355ca5b7d09e2b3044d888b0b5",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567711020" 
+isSender="true" 
+transactionId="z9hg4bkdb16b8b9db018f22ad4d3b1f0cd84159" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="9277" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKdb16b8b9db018f22ad4d3b1f0cd84159
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567735138" 
+isSender="false" 
+transactionId="z9hg4bk4762290418e62405301bb3f1465051bc" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="9388" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK4762290418e62405301bb3f1465051bc
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567735151" 
+isSender="true" 
+transactionId="z9hg4bk4762290418e62405301bb3f1465051bc" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="9451" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK4762290418e62405301bb3f1465051bc
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="9880eb579a9f0447664c8312aeadc1e6",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567735160" 
+isSender="false" 
+transactionId="z9hg4bk4762290418e62405301bb3f1465051bc" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="ACK sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="9554" 
+>
+<![CDATA[ACK sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK4762290418e62405301bb3f1465051bc
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567735170" 
+isSender="false" 
+transactionId="z9hg4bk2cbf5b56e95c1e7fce2ef1353d5b8535" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="INVITE sip:thanos@192.168.1.50:4000 SIP/2.0" 
+debugLine="9674" 
+>
+<![CDATA[INVITE sip:thanos@192.168.1.50:4000 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="9880eb579a9f0447664c8312aeadc1e6",uri="sip:thanos@192.168.1.50:4000",response="0baa56d03f85775c6f70b682f57d116d",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567735393" 
+isSender="true" 
+transactionId="z9hg4bk2cbf5b56e95c1e7fce2ef1353d5b8535" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="9784" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567735551" 
+isSender="true" 
+transactionId="z9hg4bk2fc4f2f2e9369a067c96ce7bda432869" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="INVITE sip:192.168.1.50:5060 SIP/2.0" 
+debugLine="9908" 
+>
+<![CDATA[INVITE sip:192.168.1.50:5060 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK2fc4f2f2e9369a067c96ce7bda432869,SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 69
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="9880eb579a9f0447664c8312aeadc1e6",uri="sip:thanos@192.168.1.50:4000",response="0baa56d03f85775c6f70b682f57d116d",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567735636" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk2fc4f2f2e9369a067c96ce7bda432869" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+debugLine="9965" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK2fc4f2f2e9369a067c96ce7bda432869,SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 69
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567735654" 
+isSender="true" 
+transactionId="z9hg4bk2cbf5b56e95c1e7fce2ef1353d5b8535" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="10097" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 69
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567739011" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk2fc4f2f2e9369a067c96ce7bda432869" 
+firstLine="SIP/2.0 486 Busy here" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+debugLine="10194" 
+>
+<![CDATA[SIP/2.0 486 Busy here
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK2fc4f2f2e9369a067c96ce7bda432869,SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 69
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567739015" 
+isSender="true" 
+transactionId="z9hg4bk2fc4f2f2e9369a067c96ce7bda432869" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:4000 SIP/2.0" 
+debugLine="10290" 
+>
+<![CDATA[ACK sip:192.168.1.50:4000 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 ACK
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK2fc4f2f2e9369a067c96ce7bda432869
+Max-Forwards: 69
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="9880eb579a9f0447664c8312aeadc1e6",uri="sip:thanos@192.168.1.50:4000",response="0baa56d03f85775c6f70b682f57d116d",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Route:
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567739022" 
+isSender="true" 
+transactionId="z9hg4bk2cbf5b56e95c1e7fce2ef1353d5b8535" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="SIP/2.0 486 Busy here" 
+debugLine="10421" 
+>
+<![CDATA[SIP/2.0 486 Busy here
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 69
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567739030" 
+isSender="false" 
+transactionId="z9hg4bk2cbf5b56e95c1e7fce2ef1353d5b8535" 
+callId="86ab774658b8610b667da83f83d0a3c9@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:4000 SIP/2.0" 
+debugLine="10490" 
+>
+<![CDATA[ACK sip:192.168.1.50:4000 SIP/2.0
+Call-ID: 86ab774658b8610b667da83f83d0a3c9@192.168.1.50
+CSeq: 2 ACK
+To: <sip:thanos@192.168.1.50:4000>;tag=22552192
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK2cbf5b56e95c1e7fce2ef1353d5b8535
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567743054" 
+isSender="false" 
+transactionId="z9hg4bkc5c5b77d7624027e51a6eb3edb498252" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="10599" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKc5c5b77d7624027e51a6eb3edb498252
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567743060" 
+isSender="true" 
+transactionId="z9hg4bkc5c5b77d7624027e51a6eb3edb498252" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="10662" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bKc5c5b77d7624027e51a6eb3edb498252
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="2e38b938b49c1e5ef5a903a6becf611a",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:2642" 
+to="192.168.1.50:4000" 
+time="1301567743068" 
+isSender="false" 
+transactionId="z9hg4bk4f0cd693ef0d55c0c3b559e9792fc3b3" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="10766" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK4f0cd693ef0d55c0c3b559e9792fc3b3
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:2642;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="2e38b938b49c1e5ef5a903a6becf611a",uri="sip:192.168.1.50:5061;transport=udp",response="96a80f7c8dfa58a40571c30685d4e06b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:2642" 
+time="1301567743113" 
+isSender="true" 
+transactionId="z9hg4bk4f0cd693ef0d55c0c3b559e9792fc3b3" 
+callId="eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="10830" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: eb0532edd2e66c1a363ab8f80f771d48@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:2642;branch=z9hG4bK4f0cd693ef0d55c0c3b559e9792fc3b3
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=29310343
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567744323" 
+isSender="false" 
+transactionId="z9hg4bkd7c608d47bf2cee3ee86ae9b0478da0d" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="10952" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKd7c608d47bf2cee3ee86ae9b0478da0d
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567744328" 
+isSender="true" 
+transactionId="z9hg4bkd7c608d47bf2cee3ee86ae9b0478da0d" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="11011" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKd7c608d47bf2cee3ee86ae9b0478da0d
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="6a1c8f0f7f9319f3d29a52f70dcbd0ca",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301567744337" 
+isSender="false" 
+transactionId="z9hg4bk8542945ca187be90e0895d9b150c3a9f" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="11118" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK8542945ca187be90e0895d9b150c3a9f
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="6a1c8f0f7f9319f3d29a52f70dcbd0ca",uri="sip:192.168.1.50:5061;transport=udp",response="666581136873af3f969a98ef14d17c49",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301567744368" 
+isSender="true" 
+transactionId="z9hg4bk8542945ca187be90e0895d9b150c3a9f" 
+callId="12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="11179" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 12d58f11f49c51d400d82f5cb024cc7c@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK8542945ca187be90e0895d9b150c3a9f
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=2691004
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589110012" 
+isSender="false" 
+transactionId="z9hg4bk0032bd2c69c54224aaa9c38447e9b9cf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0032bd2c69c54224aaa9c38447e9b9cf
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301589110224" 
+isSender="true" 
+transactionId="z9hg4bk0032bd2c69c54224aaa9c38447e9b9cf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0032bd2c69c54224aaa9c38447e9b9cf
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="72a11998000891fa08af2eb73c61da62",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589111774" 
+isSender="false" 
+transactionId="z9hg4bk0eccd3c6b167008d8ffadf872110decf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="261" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0eccd3c6b167008d8ffadf872110decf
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="72a11998000891fa08af2eb73c61da62",uri="sip:192.168.1.50:5061;transport=udp",response="a26468f6d727e0a92fcc7995d7e2e26b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589111800" 
+isSender="false" 
+transactionId="z9hg4bk0eccd3c6b167008d8ffadf872110decf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="373" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0eccd3c6b167008d8ffadf872110decf
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="alex",realm="nist.gov",nonce="72a11998000891fa08af2eb73c61da62",uri="sip:192.168.1.50:5061;transport=udp",response="a26468f6d727e0a92fcc7995d7e2e26b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301589111808" 
+isSender="true" 
+transactionId="z9hg4bk0eccd3c6b167008d8ffadf872110decf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="429" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0eccd3c6b167008d8ffadf872110decf
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301589111846" 
+isSender="true" 
+transactionId="z9hg4bk0eccd3c6b167008d8ffadf872110decf" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="493" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK0eccd3c6b167008d8ffadf872110decf
+Max-Forwards: 70
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589185665" 
+isSender="false" 
+transactionId="z9hg4bk774fbaaf250e4740ea5921d73eff1bce" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="595" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK774fbaaf250e4740ea5921d73eff1bce
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589185708" 
+isSender="true" 
+transactionId="z9hg4bk774fbaaf250e4740ea5921d73eff1bce" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="658" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK774fbaaf250e4740ea5921d73eff1bce
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="1c86e452c22851f94cf85a11ac66138b",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589187368" 
+isSender="false" 
+transactionId="z9hg4bk19b2f2157ac1ce3221fecccdc7c55933" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="762" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK19b2f2157ac1ce3221fecccdc7c55933
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="1c86e452c22851f94cf85a11ac66138b",uri="sip:192.168.1.50:5061;transport=udp",response="bcc5de4da1cc2d94ffc54de5dd392d1d",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589187417" 
+isSender="true" 
+transactionId="z9hg4bk19b2f2157ac1ce3221fecccdc7c55933" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="826" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK19b2f2157ac1ce3221fecccdc7c55933
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589192731" 
+isSender="false" 
+transactionId="z9hg4bked6429e70603a9741e3956c7b9195426" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="INVITE sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="937" 
+>
+<![CDATA[INVITE sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bKed6429e70603a9741e3956c7b9195426
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Type: application/sdp
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589192740" 
+isSender="true" 
+transactionId="z9hg4bked6429e70603a9741e3956c7b9195426" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="1000" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 1 INVITE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bKed6429e70603a9741e3956c7b9195426
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="fb9f99e36cd10361c9fa93274194952b",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589192752" 
+isSender="false" 
+transactionId="z9hg4bked6429e70603a9741e3956c7b9195426" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="ACK sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="1103" 
+>
+<![CDATA[ACK sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 1 ACK
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bKed6429e70603a9741e3956c7b9195426
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589192764" 
+isSender="false" 
+transactionId="z9hg4bk4820e917a903401fac0f9d013e8d7266" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="INVITE sip:alex@192.168.1.50:4000 SIP/2.0" 
+debugLine="1227" 
+>
+<![CDATA[INVITE sip:alex@192.168.1.50:4000 SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 70
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="fb9f99e36cd10361c9fa93274194952b",uri="sip:alex@192.168.1.50:4000",response="ee7695e6ba5649d44de1465158b79cee",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589192996" 
+isSender="true" 
+transactionId="z9hg4bk4820e917a903401fac0f9d013e8d7266" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 100 Trying" 
+debugLine="1333" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301589193274" 
+isSender="true" 
+transactionId="z9hg4bk4e7656fa4a79953278b736553cf36462" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="INVITE sip:192.168.1.50:5060 SIP/2.0" 
+debugLine="1457" 
+>
+<![CDATA[INVITE sip:192.168.1.50:5060 SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK4e7656fa4a79953278b736553cf36462,SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Type: application/sdp
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="fb9f99e36cd10361c9fa93274194952b",uri="sip:alex@192.168.1.50:4000",response="ee7695e6ba5649d44de1465158b79cee",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589193488" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk4e7656fa4a79953278b736553cf36462" 
+firstLine="SIP/2.0 100 Trying" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+debugLine="1514" 
+>
+<![CDATA[SIP/2.0 100 Trying
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK4e7656fa4a79953278b736553cf36462,SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589193615" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk4e7656fa4a79953278b736553cf36462" 
+firstLine="SIP/2.0 180 Ringing" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+debugLine="1631" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK4e7656fa4a79953278b736553cf36462,SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589193620" 
+isSender="true" 
+transactionId="z9hg4bk4820e917a903401fac0f9d013e8d7266" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 180 Ringing" 
+debugLine="1740" 
+>
+<![CDATA[SIP/2.0 180 Ringing
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301589205455" 
+isSender="false" 
+statusMessage="normal processing" 
+transactionId="z9hg4bk4e7656fa4a79953278b736553cf36462" 
+firstLine="SIP/2.0 200 OK" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+debugLine="1875" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bK4e7656fa4a79953278b736553cf36462,SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Type: application/sdp
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589205461" 
+isSender="true" 
+transactionId="z9hg4bk4820e917a903401fac0f9d013e8d7266" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2028" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 INVITE
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK4820e917a903401fac0f9d013e8d7266
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Record-Route: <sip:192.168.1.50:4000>
+Content-Type: application/sdp
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 157
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589205472" 
+isSender="false" 
+transactionId="1274095861" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="2161" 
+>
+<![CDATA[ACK sip:192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 ACK
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=322e3136382e312e35303a313331363
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Route: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301589206094" 
+isSender="true" 
+transactionId="z9hg4bked984308da1ebef5559792efdf1e168e" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="ACK sip:192.168.1.50:5060 SIP/2.0" 
+debugLine="2389" 
+>
+<![CDATA[ACK sip:192.168.1.50:5060 SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 ACK
+To: <sip:alex@192.168.1.50:4000>;tag=27187756
+Via: SIP/2.0/UDP 192.168.1.50:4000;branch=z9hG4bKed984308da1ebef5559792efdf1e168e,SIP/2.0/UDP 192.168.1.50:13166;branch=322e3136382e312e35303a313331363
+Max-Forwards: 69
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Route: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Record-Route: <sip:192.168.1.50:4000>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301589327458" 
+isSender="false" 
+transactionId="z9hg4bk6f438f6754d3b5bba749ec1308d2839d" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="BYE sip:alex@192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="2509" 
+>
+<![CDATA[BYE sip:alex@192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 BYE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK6f438f6754d3b5bba749ec1308d2839d
+Max-Forwards: 70
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301589327465" 
+isSender="true" 
+transactionId="z9hg4bk6f438f6754d3b5bba749ec1308d2839d" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2570" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 2 BYE
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: <sip:alex@192.168.1.50:4000>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK6f438f6754d3b5bba749ec1308d2839d
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="d56f09f568b3b7ad5ff696779ecb510f",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301591569293" 
+isSender="false" 
+transactionId="z9hg4bkc3cfc28cfb5361872a43b584518cf79d" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2680" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bKc3cfc28cfb5361872a43b584518cf79d
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301591569352" 
+isSender="true" 
+transactionId="z9hg4bkc3cfc28cfb5361872a43b584518cf79d" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="2735" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bKc3cfc28cfb5361872a43b584518cf79d
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="2aac79766aff9e7dbd5a591e3ede535c",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:13166" 
+to="192.168.1.50:4000" 
+time="1301591569365" 
+isSender="false" 
+transactionId="z9hg4bk842253a149b50023f3e20941bc617e12" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="2839" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK842253a149b50023f3e20941bc617e12
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="2aac79766aff9e7dbd5a591e3ede535c",uri="sip:192.168.1.50:5061;transport=udp",response="1370fca6bdc6e2e218d4c477b9d20364",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:13166" 
+time="1301591569423" 
+isSender="true" 
+transactionId="z9hg4bk842253a149b50023f3e20941bc617e12" 
+callId="f41bcc387158a6977944a4b4c1783f3d@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="2903" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: f41bcc387158a6977944a4b4c1783f3d@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:13166;branch=z9hG4bK842253a149b50023f3e20941bc617e12
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301591571808" 
+isSender="false" 
+transactionId="z9hg4bk957ecc80a6c7d9365bba9c8eb1b8b7fc" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="BYE sip:192.168.1.50:4000;transport=udp SIP/2.0" 
+debugLine="3032" 
+>
+<![CDATA[BYE sip:192.168.1.50:4000;transport=udp SIP/2.0
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 1 BYE
+From: <sip:alex@192.168.1.50:4000>;tag=27187756
+Max-Forwards: 69
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK957ecc80a6c7d9365bba9c8eb1b8b7fc
+Route: "jmaria" <sip:192.168.1.50:13166;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301591571816" 
+isSender="false" 
+transactionId="z9hg4bkfe987c817ee54c8e88598c7191523c1f" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="3139" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKfe987c817ee54c8e88598c7191523c1f
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301591571874" 
+isSender="true" 
+transactionId="z9hg4bk957ecc80a6c7d9365bba9c8eb1b8b7fc" 
+callId="7a6463cc9b39957b300699cedd20d045@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3212" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 7a6463cc9b39957b300699cedd20d045@192.168.1.50
+CSeq: 1 BYE
+From: <sip:alex@192.168.1.50:4000>;tag=27187756
+Max-Forwards: 69
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=13676443
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK957ecc80a6c7d9365bba9c8eb1b8b7fc
+Proxy-Authenticate: Digest realm="nist.gov",nonce="425e291b031673f440ae3ea20e0d2786",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301591571880" 
+isSender="true" 
+transactionId="z9hg4bkfe987c817ee54c8e88598c7191523c1f" 
+callId="a0a309c13d3070f603df751bda00335b@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="3277" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: a0a309c13d3070f603df751bda00335b@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>;tag=31706449
+To: "jmaria" <sip:alex@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKfe987c817ee54c8e88598c7191523c1f
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="539d4eb60ed467b32dbab0b0ec9db694",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592346417" 
+isSender="false" 
+transactionId="z9hg4bk734c804473a5d004fe744748d0cdb017" 
+callId="11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=26171428
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK734c804473a5d004fe744748d0cdb017
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592346563" 
+isSender="true" 
+transactionId="z9hg4bk734c804473a5d004fe744748d0cdb017" 
+callId="11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=26171428
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK734c804473a5d004fe744748d0cdb017
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="21912a76ad52f82ce32b7df0bbd49aa5",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592348539" 
+isSender="false" 
+transactionId="z9hg4bk824bef82368a10d8d5ca2ea443b4214b" 
+callId="11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="267" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK824bef82368a10d8d5ca2ea443b4214b
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="21912a76ad52f82ce32b7df0bbd49aa5",uri="sip:192.168.1.50:5061;transport=udp",response="41ba40b1958d0d8cea71770f1dfbc931",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=26171428
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592348569" 
+isSender="true" 
+transactionId="z9hg4bk824bef82368a10d8d5ca2ea443b4214b" 
+callId="11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="325" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 11cc5965353c5f9b4a11c5442a8c6922@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK824bef82368a10d8d5ca2ea443b4214b
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=26171428
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<!-- Use the  Trace Viewer in src/tools/tracesviewer to view this  trace  
+Here are the stack configuration properties 
+javax.sip.IP_ADDRESS= 192.168.1.50
+javax.sip.STACK_NAME= nist-proxy
+javax.sip.ROUTER_PATH= gov.nist.sip.proxy.router.ProxyRouter
+javax.sip.OUTBOUND_PROXY= null
+javax.sip.RETRANSMISSION_FILTER= on
+-->
+<description
+ logDescription="nist-proxy"
+ name="192.168.1.50" />
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592451140" 
+isSender="false" 
+transactionId="z9hg4bkfcb752ef95e3eb5852aeeae1e6952f5d" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="102" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKfcb752ef95e3eb5852aeeae1e6952f5d
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592451303" 
+isSender="true" 
+transactionId="z9hg4bkfcb752ef95e3eb5852aeeae1e6952f5d" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="157" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 1 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKfcb752ef95e3eb5852aeeae1e6952f5d
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="de69c657c52349dc1a58b62321658299",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592452799" 
+isSender="false" 
+transactionId="z9hg4bka9cc89aab656f51dda72586524e47fe1" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="261" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa9cc89aab656f51dda72586524e47fe1
+Max-Forwards: 70
+Expires: 3600
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="de69c657c52349dc1a58b62321658299",uri="sip:192.168.1.50:5061;transport=udp",response="3969af8d0e7b6831a2e319040564336b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592452833" 
+isSender="true" 
+transactionId="z9hg4bka9cc89aab656f51dda72586524e47fe1" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="325" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 2 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKa9cc89aab656f51dda72586524e47fe1
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>;expires=3600
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592472313" 
+isSender="false" 
+transactionId="z9hg4bkc0a2dc00f4228d7619d8750f433ef3cd" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="427" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc0a2dc00f4228d7619d8750f433ef3cd
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592472323" 
+isSender="true" 
+transactionId="z9hg4bkc0a2dc00f4228d7619d8750f433ef3cd" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="SIP/2.0 407 Proxy Authentication required" 
+debugLine="490" 
+>
+<![CDATA[SIP/2.0 407 Proxy Authentication required
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 2 REGISTER
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bKc0a2dc00f4228d7619d8750f433ef3cd
+Max-Forwards: 70
+Proxy-Authenticate: Digest realm="nist.gov",nonce="fe0807c3da4f5be1819099d96056e073",opaque="",stale=FALSE,algorithm=MD5
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:5060" 
+to="192.168.1.50:4000" 
+time="1301592472333" 
+isSender="false" 
+transactionId="z9hg4bk2a63a290758a1069a89bc1db76e92722" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0" 
+debugLine="594" 
+>
+<![CDATA[REGISTER sip:192.168.1.50:5061;transport=udp SIP/2.0
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK2a63a290758a1069a89bc1db76e92722
+Max-Forwards: 70
+Expires: 0
+Contact: "jmaria" <sip:192.168.1.50:5060;transport=udp>
+Proxy-Authorization: Digest username="thanos",realm="nist.gov",nonce="fe0807c3da4f5be1819099d96056e073",uri="sip:192.168.1.50:5061;transport=udp",response="c02be3beada673833d0832ac7560004b",algorithm=MD5,opaque=""
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Content-Length: 0
+
+]]>
+</message>
+
+<message
+from="192.168.1.50:4000" 
+to="192.168.1.50:5060" 
+time="1301592472375" 
+isSender="true" 
+transactionId="z9hg4bk2a63a290758a1069a89bc1db76e92722" 
+callId="9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50" 
+firstLine="SIP/2.0 200 OK" 
+debugLine="658" 
+>
+<![CDATA[SIP/2.0 200 OK
+Call-ID: 9bf36c9c28a8f759d1e8a8b902ada2db@192.168.1.50
+CSeq: 3 REGISTER
+Via: SIP/2.0/UDP 192.168.1.50:5060;branch=z9hG4bK2a63a290758a1069a89bc1db76e92722
+Max-Forwards: 70
+From: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>;tag=4890830
+To: "jmaria" <sip:thanos@192.168.1.50:4000;transport=udp>
+Expires: 0
+Content-Length: 0
+
+]]>
+</message>
+
