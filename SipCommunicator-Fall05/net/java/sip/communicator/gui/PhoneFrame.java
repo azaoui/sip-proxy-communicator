@@ -77,6 +77,7 @@ class PhoneFrame
     extends JFrame
 {
     BorderLayout borderLayout1 = new BorderLayout();
+    
     JSplitPane splitPane = new JSplitPane();
     TitledBorder titledBorder1;
     Border border1;
@@ -110,11 +111,16 @@ class PhoneFrame
     Border border14;
     BoxLayout boxLayout21 = new BoxLayout(videoPane, BoxLayout.Y_AXIS);
     Border border15;
+ 
 
     private GuiManager guiManCallback = null;
-    BorderLayout borderLayout4 = new BorderLayout();
+    GridLayout gridlayout2 = new GridLayout(3,2);
+    //BorderLayout borderLayout4 = new BorderLayout();
     JPanel dialPanel = new JPanel();
     JButton dialButton = new JButton();
+    JButton blockButton = new JButton();
+    JLabel billingLabel = new JLabel("billing of recent call:   ",SwingConstants.RIGHT);
+    JTextField billingTextField = new JTextField();
     JComboBox contactBox = new JComboBox();
 
     public PhoneFrame(GuiManager guiManCallback) //throws HeadlessException
@@ -153,6 +159,7 @@ class PhoneFrame
         border5 = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         border6 = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         border7 = BorderFactory.createEmptyBorder(5, 5, 5, 5);
+        
         border8 = BorderFactory.createEmptyBorder(5, 5, 5, 5);
         border14 = BorderFactory.createEmptyBorder(4, 0, 0, 0);
         this.getContentPane().setLayout(borderLayout1);
@@ -191,12 +198,27 @@ class PhoneFrame
         registrationLabel.setText("Not Registered");
         statusPanel.setLayout(borderLayout5);
 //        participantsTable.setMinimumSize(new Dimension(45, 300));
-        borderLayout4.setHgap(10);
-        dialPanel.setLayout(borderLayout4);
+        //borderLayout4.setHgap(10);
+        //dialPanel.setLayout(borderLayout4);
+        dialPanel.setLayout(gridlayout2);
         dialPanel.setBorder(border7);
         dialButton.setEnabled(false);
         dialButton.setMnemonic('D');
         dialButton.setText("Dial");
+        
+        billingLabel.setEnabled(true);
+        billingTextField.setEditable(false);
+        billingTextField.setEnabled(true);
+        billingTextField.setText("*xreosi*");
+        
+        blockButton.setEnabled(true);
+        blockButton.setMnemonic('B');
+        blockButton.setText("Block");
+        
+       // billingButton.setEnabled(false);
+       // billingButton.setMnemonic('L');
+       // billingButton.setText("Billing");
+        
         contactBox.setBorder(null);
         contactBox.setDebugGraphicsOptions(0);
         contactBox.setActionMap(null);
@@ -225,9 +247,17 @@ class PhoneFrame
         participantsScroll.setViewportView(participantsTable);
         statusPanel.add(registrationLabel, BorderLayout.WEST);
         statusPanel.add(registrationAddressLabel, BorderLayout.CENTER);
-        this.getContentPane().add(dialPanel, BorderLayout.NORTH);
-        dialPanel.add(dialButton, BorderLayout.EAST);
-        dialPanel.add(contactBox, BorderLayout.CENTER);
+        this.getContentPane().add(dialPanel, BorderLayout.NORTH);                       
+        //dialPanel.add(dialButton, BorderLayout.EAST);
+        //dialPanel.add(contactBox, BorderLayout.CENTER);
+       // dialPanel.add(blockButton,BorderLayout.SOUTH);
+       // dialPanel.add(billingButton,BorderLayout.NORTH);
+        dialPanel.add(contactBox);
+        dialPanel.add(dialButton);
+        dialPanel.add(billingLabel);
+        dialPanel.add(billingTextField);
+        dialPanel.add(blockButton);
+        
 //        splitPane.setDividerLocation(200);
     }
 
