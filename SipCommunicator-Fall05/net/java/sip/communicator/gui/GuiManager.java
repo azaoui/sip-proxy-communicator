@@ -146,7 +146,7 @@ public class GuiManager
         alertManager  = new AlertManager();
         logoPanel     = new JPanel(new FlowLayout(FlowLayout.CENTER));
         interlocutors = new InterlocutorsTableModel();
-        blockSplash = new BlockSplash();
+		blockSplash = new BlockSplash();
         //billingSplash  = new BillingSplash();
 
         initActionListeners();

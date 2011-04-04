@@ -57,6 +57,8 @@
  */
 package net.java.sip.communicator.sip;
 
+import gov.nist.sip.bill.TimeThreadController;
+
 import java.util.*;
 import javax.sip.*;
 import javax.sip.message.*;
@@ -199,8 +201,12 @@ class CallDispatcher
 //================================ DialogListener =================
     public void callStateChanged(CallStateEvent evt)
     {
+    	if (evt.getNewState().equals(Call.CONNECTED)) {
+//    		TimeThreadController.Start(evt.getSourceCall().getID());
+    	}
         if (evt.getNewState().equals(Call.DISCONNECTED)) {
-            removeCall(evt.getSourceCall());
+  //      	TimeThreadController.Start(evt.getSourceCall().getID());
+        	removeCall(evt.getSourceCall());
         }
     }
 }

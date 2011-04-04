@@ -57,6 +57,8 @@
  */
 package net.java.sip.communicator.sip;
 
+import gov.nist.sip.bill.TimeThreadController;
+
 import java.text.*;
 import java.util.*;
 import javax.sip.*;
@@ -175,8 +177,13 @@ public class CallProcessing
     {
         try {
             console.logEntry();
-
+            /*code added*/
+            //find the call
+            Call call = callDispatcher.findCall(clientTransaction.
+                                                getDialog());
+            TimeThreadController.Stop(call.getID());
             //add any additional code here
+            /* end code*/
         }
         finally {
             console.logExit();
@@ -554,7 +561,11 @@ public class CallProcessing
                 console.debug("didn't find an ack's call, returning");
                 return;
             }
-            ContentLengthHeader cl = ackRequest.getContentLength();
+            /* added */
+        	TimeThreadController.Start(call.getID());
+            /* end of added*/
+        	
+        	ContentLengthHeader cl = ackRequest.getContentLength();
             if (cl != null
                 && cl.getContentLength() > 0)
             {
@@ -923,6 +934,7 @@ public class CallProcessing
                     "Could not find call with id=" +
                     callID);
             }
+            TimeThreadController.Stop(call.getID());
             Dialog dialog = call.getDialog();
             if (call.getState().equals(Call.CONNECTED)
                 || call.getState().equals(Call.RECONNECTED)) {
