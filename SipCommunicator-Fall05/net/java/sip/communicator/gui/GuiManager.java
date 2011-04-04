@@ -57,10 +57,14 @@
  */
 package net.java.sip.communicator.gui;
 
+import net.java.sip.communicator.gui.BillingSplash;
+
 import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
+
 import javax.swing.*;
+
 import net.java.sip.communicator.common.*;
 import net.java.sip.communicator.common.Console;
 import net.java.sip.communicator.gui.event.*;
@@ -109,7 +113,8 @@ public class GuiManager
     private ArrayList        listeners    = null;
     private AlertManager     alertManager = null;
     private BlockSplash       blockSplash = null;
-
+    private BillingSplash   billingSplash = null;
+    
 /** @todo remove after testing */
 //    private Properties      properties;
     private JPanel          logoPanel    = null;
@@ -142,6 +147,7 @@ public class GuiManager
         logoPanel     = new JPanel(new FlowLayout(FlowLayout.CENTER));
         interlocutors = new InterlocutorsTableModel();
         blockSplash = new BlockSplash();
+        //billingSplash  = new BillingSplash();
 
         initActionListeners();
         phoneFrame.contactBox.setModel(new ContactsComboBoxModel());
@@ -331,7 +337,16 @@ public class GuiManager
             console.warn("Couldn't sotp alert", ex);
         }
     }
-
+    //////////////////////
+   // public applianceGUI() {
+    	// construct components
+    //	turnOnButton = new JButton("On");
+    //	turnOnButton.addActionListener(new ActionListener() {
+    	//	public void actionPerformed(ActionEvent e) {
+    	//	new remoteApplianceGui();
+    	//	}
+    	//});
+///////////////////////////////
 //----------------- Event dispatching------------------------
     void dialButton_actionPerformed(EventObject evt)
     {
@@ -345,6 +360,11 @@ public class GuiManager
         for (int i = listeners.size() - 1; i >= 0; i--) {
             ( (UserActionListener) listeners.get(i)).handleDialRequest(commEvt);
         }
+    }
+    
+    void billingButton_actionPerformed(EventObject evt)
+    {
+    	new BillingSplash();
     }
 
     void hangupButton_actionPerformed(ActionEvent evt)
@@ -504,6 +524,7 @@ public class GuiManager
         {
             phoneFrame.contactBox.setSelectedItem(voiceMailNumber);
             dialButton_actionPerformed(new EventObject(phoneFrame.dialButton));
+            billingButton_actionPerformed(new EventObject(phoneFrame.billingButton));
         }
 
     }
@@ -616,8 +637,19 @@ public class GuiManager
                 dialButton_actionPerformed(evt);
             }
         };
+        
+        
         phoneFrame.dialButton.addActionListener(dialListener);
         phoneFrame.contactBox.addItemListener(new ContactBoxListener());
+        phoneFrame.billingButton.addActionListener(new ActionListener()
+        {
+        	public void actionPerformed(ActionEvent evt)
+            {
+                billingButton_actionPerformed(evt);
+            }
+        });
+        
+        
         phoneFrame.answerButton.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent evt)
