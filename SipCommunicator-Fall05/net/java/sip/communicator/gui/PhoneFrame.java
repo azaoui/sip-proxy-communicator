@@ -76,6 +76,7 @@ import javax.swing.border.*;
 class PhoneFrame
     extends JFrame
 {
+	
     BorderLayout borderLayout1 = new BorderLayout();
     
     JSplitPane splitPane = new JSplitPane();
@@ -125,6 +126,7 @@ class PhoneFrame
 
     public PhoneFrame(GuiManager guiManCallback) //throws HeadlessException
     {
+    	
         try {
 
             this.guiManCallback = guiManCallback;

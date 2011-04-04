@@ -1,9 +1,12 @@
 package net.java.sip.communicator.gui;
 
 
+import javax.swing.UIManager;
+import javax.swing.plaf.metal.MetalLookAndFeel;
 
-
+import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +16,10 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.SwingUtilities;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 
 import net.java.sip.communicator.common.Utils;
 import net.java.sip.socketclient.RequestSocket;
@@ -26,8 +33,8 @@ public class BlockSplash extends JFrame{
 	public BlockSplash(){
 
         super("Blocked List");
-        setSize(430, 150);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(280,120);
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         // create top panel
         JPanel commandPane = new JPanel();
         BoxLayout horizontal = new BoxLayout(commandPane,
@@ -36,7 +43,7 @@ public class BlockSplash extends JFrame{
         JButton blockButton = new JButton("Block");
         JButton unblockButton = new JButton("Unblock");
         JButton refreshButton = new JButton("Refresh");
-        
+       
         commandPane.add(blockButton);
         commandPane.add(unblockButton);
         commandPane.add(refreshButton);
@@ -79,6 +86,20 @@ public class BlockSplash extends JFrame{
     		}
     	});
         
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        /*int X = (screen.width / 2) - (280 / 2)+340; // Center horizontally.
+        int Y = (screen.height / 2) - (120 / 2)+260; // Center vertically.
+
+        setBounds(X,Y , 280,120);*/
+        
+        // Determine the new location of the window
+        
+        int x = ((screen.width-280)/2) + 285;
+        int y = ((screen.height-120)/2)- 173;
+        
+        // Move the window
+        setLocation(x, y);
+       
         
         // put them together
         FlowLayout flow = new FlowLayout();

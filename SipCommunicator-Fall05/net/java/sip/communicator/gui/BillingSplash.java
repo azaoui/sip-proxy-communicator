@@ -10,19 +10,31 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.table.DefaultTableModel;
 
 public class BillingSplash {
 	
   public BillingSplash(){ 	
-  //public static void main(String args[]) {
+ 
     JFrame frame = new JFrame();
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
-    Object rowData[][] = { { "Row1-Column1", "Row1-Column2", "Row1-Column3" },
-        { "Row2-Column1", "Row2-Column2", "Row2-Column3" } };
-    Object columnNames[] = { "Caller", "Callee", "Cost" };
-    JTable table = new JTable(rowData, columnNames);
+    DefaultTableModel model = new DefaultTableModel();
+    JTable table = new JTable(model);
 
+    // Create a couple of columns
+    model.addColumn("Caller");
+    model.addColumn("Callee");
+    model.addColumn("Starting Time");
+    model.addColumn("Ending Time");
+    model.addColumn("Cost");
+    
+    
+    //dimiourgoume tin proti grami kai adistoixa tis epomenes me ton idio tropo
+    //ka8e fora pou 8a teleionei mia klisei prepei na ftiaxnoume kai mia nea grammi. 
+    //Ara ka8e fora pou 8a epistrefoume ton caller,calle,time ,cost 8a ftiaxnoume mia kainouria grammi
+    int cost = 23;
+    model.insertRow(0, new Object[]{"r2","gfg", "dfdf", "fgdgf", cost});
+    
     JScrollPane scrollPane = new JScrollPane(table);
     JPanel costPanel = new JPanel();
     JLabel costLabel = new JLabel("total debt:   ",SwingConstants.RIGHT); 
