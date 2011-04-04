@@ -7,11 +7,13 @@ import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
 import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 
 public class MultipleSocketServer implements Runnable {
 
@@ -21,6 +23,7 @@ public class MultipleSocketServer implements Runnable {
 	private static char UNBLOCK = '2';
 	private static char FORWARD = '3';
 	private static char UNFORWARD = '4';
+	private static char BILL = '5';
 
 	 public static void main(String[] args) {
 		int port = 4444;
@@ -54,6 +57,7 @@ public class MultipleSocketServer implements Runnable {
 		try {
 			InputStreamReader isr = new InputStreamReader(connection
 					.getInputStream());
+			ObjectInputStream obj = new ObjectInputStream(connection.getInputStream());
 			BufferedReader line = new BufferedReader(isr);
 
 			String returnCode;
@@ -90,9 +94,11 @@ public class MultipleSocketServer implements Runnable {
 						System.out.println("No such user");
 						e.printStackTrace();
 					}
-				} else {
-					// other
-
+				} else if (request == BILL){
+					// accept request with call info
+					Date start = (Date) obj.readObject();
+					Date end = (Date) obj.readObject();
+					
 				}
 
 				System.out.println(process);
