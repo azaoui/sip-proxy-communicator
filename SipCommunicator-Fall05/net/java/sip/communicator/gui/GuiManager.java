@@ -774,11 +774,7 @@ public class GuiManager
 
         public void actionPerformed(ActionEvent evt)
         {
-        	 RequestSocket req = new RequestSocket();
-             req.listenSocket();
-             if (req != null)
-             	req.SendRequest(RequestSocket.BLOCK, "alex", "thanos"); 
-             
+        	 
              JOptionPane.showMessageDialog(null,
                                            new JLabel(new ImageIcon(Utils.getResource("sip-communicator.about.jpg"))),
                                            "SIPphone Anywhere (powered by SIP Communicator)",

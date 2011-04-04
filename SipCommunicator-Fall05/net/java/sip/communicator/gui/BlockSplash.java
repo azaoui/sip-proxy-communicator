@@ -50,7 +50,7 @@ public class BlockSplash extends JFrame{
         // create bottom panel
         JPanel textPane = new JPanel();
         //JTextArea text = new JTextArea(4,20);
-        JComboBox listBox = new JComboBox();
+       final JComboBox listBox = new JComboBox();
         listBox.setBorder(null);
         listBox.setDebugGraphicsOptions(0);
         listBox.setActionMap(null);
@@ -59,9 +59,14 @@ public class BlockSplash extends JFrame{
         
         blockButton.addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent e) {
-    			new BillingSplash();
+    			//new BillingSplash();
+    			String blocked_person = listBox.getSelectedItem().toString();
     			
-    			//String blocked_person = listBox.getSelectedItem().toString();
+    			RequestSocket req = new RequestSocket();
+                req.listenSocket();
+                if (req != null)
+                	req.SendRequest(RequestSocket.BLOCK, "alex", blocked_person); 
+                
     		}
     	});
         
