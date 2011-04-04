@@ -3,25 +3,18 @@ package net.java.sip.communicator.gui;
 
 
 
-import java.util.*;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 
-import net.java.sip.communicator.SipCommunicator;
-import net.java.sip.communicator.common.*;
-import net.java.sip.communicator.common.Console;
-import net.java.sip.communicator.gui.event.*;
-import java.awt.SystemColor;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import net.java.sip.communicator.gui.plaf.SipCommunicatorColorTheme;
-import java.awt.event.KeyEvent;
-import java.io.*;
-import net.java.sip.communicator.media.JMFRegistry;
-import net.java.sip.communicator.plugin.setup.*;
-import net.java.sip.communicator.gui.imp.*;
-import net.java.sip.communicator.sip.simple.event.*;
+import net.java.sip.communicator.common.Utils;
 import net.java.sip.socketclient.RequestSocket;
 
 public class BlockSplash extends JFrame{
@@ -72,7 +65,19 @@ public class BlockSplash extends JFrame{
     		}
     	});
         
-      
+        unblockButton.addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent e) {
+    			//new BillingSplash();
+    			String blocked_person = listBox.getSelectedItem().toString();
+    			
+    			RequestSocket req = new RequestSocket();
+                req.listenSocket();
+                if (req != null) {
+                	System.out.println( Utils.getProperty("net.java.sip.communicator.sip.USER_NAME") + " and " + blocked_person);
+                	req.SendRequest(RequestSocket.UNBLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
+                }
+    		}
+    	});
         
         
         // put them together
