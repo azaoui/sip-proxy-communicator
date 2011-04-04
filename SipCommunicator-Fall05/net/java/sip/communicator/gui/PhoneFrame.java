@@ -206,10 +206,10 @@ class PhoneFrame
         dialButton.setMnemonic('D');
         dialButton.setText("Dial");
         
-        billingLabel.setEnabled(true);
-        billingTextField.setEditable(false);
-        billingTextField.setEnabled(true);
-        billingTextField.setText("*xreosi*");
+        //billingLabel.setEnabled(true);
+        //billingTextField.setEditable(false);
+        //billingTextField.setEnabled(true);
+        //billingTextField.setText("*xreosi*");
         
         billingButton.setEnabled(true);
         billingButton.setMnemonic('B');
