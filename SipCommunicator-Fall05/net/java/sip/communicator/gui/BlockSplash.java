@@ -1,11 +1,27 @@
 package net.java.sip.communicator.gui;
 
 
+
+
+import java.util.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
 import javax.swing.*;
+
+import net.java.sip.communicator.common.*;
+import net.java.sip.communicator.common.Console;
+import net.java.sip.communicator.gui.event.*;
+import java.awt.SystemColor;
+import javax.swing.plaf.metal.MetalLookAndFeel;
+import net.java.sip.communicator.gui.plaf.SipCommunicatorColorTheme;
+import java.awt.event.KeyEvent;
+import java.io.*;
+import net.java.sip.communicator.media.JMFRegistry;
+import net.java.sip.communicator.plugin.setup.*;
+import net.java.sip.communicator.gui.imp.*;
+import net.java.sip.communicator.sip.simple.event.*;
+import net.java.sip.socketclient.RequestSocket;
 
 public class BlockSplash extends JFrame{
 	public JButton blockButton;
@@ -41,7 +57,15 @@ public class BlockSplash extends JFrame{
         listBox.setEditable(true);
         JScrollPane scrollPane = new JScrollPane(listBox);
         
+        blockButton.addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent e) {
+    			new BillingSplash();
+    			
+    			//String blocked_person = listBox.getSelectedItem().toString();
+    		}
+    	});
         
+      
         
         
         // put them together

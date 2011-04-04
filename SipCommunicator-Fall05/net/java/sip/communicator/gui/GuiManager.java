@@ -151,7 +151,7 @@ public class GuiManager
 
         initActionListeners();
         phoneFrame.contactBox.setModel(new ContactsComboBoxModel());
-        blockSplash.listBox.setModel(new ContactsComboBoxModel());
+        //blockSplash.listBox.setModel(new ContactsComboBoxModel());
 
         ConfigAction configAction = new ConfigAction();
         ( (MenuBar) phoneFrame.jMenuBar1).addConfigCallAction(configAction);
@@ -289,6 +289,7 @@ public class GuiManager
         phoneFrame.dialButton.setEnabled(enabled);
         phoneFrame.hangupButton.setEnabled(enabled);
         phoneFrame.answerButton.setEnabled(enabled);
+        //blockSplash.blockButton.setEnabled(enabled);
     }
 
     public void addUserActionListener(UserActionListener l)
@@ -367,15 +368,17 @@ public class GuiManager
     
     void billingButton_actionPerformed(EventObject evt)
     {
+    	alertManager.stopAllAlerts();
     	new BillingSplash();
     }
     
     // !!actionPerformed gia blockButton
-    void blockButton_actionPerformed(EventObject evt)
+    /*void blockButton_actionPerformed(EventObject evt)
     {
+    	alertManager.stopAllAlerts();
     	new BillingSplash();
     	//String blocked_person = blockSplash.listBox.getSelectedItem().toString();
-    }
+    }*/
 
     void hangupButton_actionPerformed(ActionEvent evt)
     {
@@ -535,7 +538,7 @@ public class GuiManager
             phoneFrame.contactBox.setSelectedItem(voiceMailNumber);
             dialButton_actionPerformed(new EventObject(phoneFrame.dialButton));
             billingButton_actionPerformed(new EventObject(phoneFrame.billingButton));
-            blockButton_actionPerformed(new EventObject(blockSplash.blockButton));
+            //blockButton_actionPerformed(new EventObject(blockSplash.blockButton));
         }
 
     }
@@ -654,14 +657,14 @@ public class GuiManager
         phoneFrame.contactBox.addItemListener(new ContactBoxListener());
         
         // !!blockSplash blockbutton listener
-        blockSplash.blockButton.addActionListener(new ActionListener()
+        /*blockSplash.blockButton.addActionListener(new ActionListener()
         {
         	public void actionPerformed(ActionEvent evt)
         	{
         		blockButton_actionPerformed(evt);
         	}
         });
-        
+        */
         
         phoneFrame.billingButton.addActionListener(new ActionListener()
         {
@@ -774,7 +777,7 @@ public class GuiManager
         	 RequestSocket req = new RequestSocket();
              req.listenSocket();
              if (req != null)
-             	req.SendRequest(RequestSocket.BLOCK, "alex", "thanos");
+             	req.SendRequest(RequestSocket.BLOCK, "alex", "thanos"); 
              
              JOptionPane.showMessageDialog(null,
                                            new JLabel(new ImageIcon(Utils.getResource("sip-communicator.about.jpg"))),
