@@ -47,14 +47,16 @@ public class RequestSocket {
 		}
 	}
 
-	public void SendRequest(char req_no, String UserFrom, String UserTo) {
+	public String SendRequest(char req_no, String UserFrom, String UserTo) {
 		console.logEntry();
-
+		String answer = null;
+		
 		out.print(req_no);
 		out.println(UserFrom);
 		out.println(UserTo);
 		try {
-			console.debug(in.readLine());
+			answer  = in.readLine();
+			console.debug(answer);
 		} catch (IOException e) {
 			console.error(e);
 			console.showException(e);
@@ -66,7 +68,9 @@ public class RequestSocket {
 			console.error(e);
 			System.out.println("No I/O");
 		}
+		
 		console.logExit();
+		return answer;
 	}
 
 	public void SendBillInfo(String UserFrom, String UserTo, Date Start, Date End) throws IOException {
