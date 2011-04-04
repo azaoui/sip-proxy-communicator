@@ -118,7 +118,7 @@ class PhoneFrame
     //BorderLayout borderLayout4 = new BorderLayout();
     JPanel dialPanel = new JPanel();
     JButton dialButton = new JButton();
-    JButton blockButton = new JButton();
+    JButton billingButton = new JButton();
     JLabel billingLabel = new JLabel("billing of recent call:   ",SwingConstants.RIGHT);
     JTextField billingTextField = new JTextField();
     JComboBox contactBox = new JComboBox();
@@ -211,9 +211,9 @@ class PhoneFrame
         billingTextField.setEnabled(true);
         billingTextField.setText("*xreosi*");
         
-        blockButton.setEnabled(true);
-        blockButton.setMnemonic('B');
-        blockButton.setText("Block");
+        billingButton.setEnabled(true);
+        billingButton.setMnemonic('B');
+        billingButton.setText("call cost");
         
        // billingButton.setEnabled(false);
        // billingButton.setMnemonic('L');
@@ -256,7 +256,7 @@ class PhoneFrame
         dialPanel.add(dialButton);
         dialPanel.add(billingLabel);
         dialPanel.add(billingTextField);
-        dialPanel.add(blockButton);
+        dialPanel.add(billingButton);
         
 //        splitPane.setDividerLocation(200);
     }

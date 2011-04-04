@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.JDialog;
 
 public class BlockSplash extends JFrame{
+	
 	public BlockSplash(){
 
         super("Blocked List");
@@ -24,8 +25,13 @@ public class BlockSplash extends JFrame{
         
         // create bottom panel
         JPanel textPane = new JPanel();
-        JTextArea text = new JTextArea(4,40);
-        JScrollPane scrollPane = new JScrollPane(text);
+        //JTextArea text = new JTextArea(4,20);
+        JComboBox listBox = new JComboBox();
+        listBox.setBorder(null);
+        listBox.setDebugGraphicsOptions(0);
+        listBox.setActionMap(null);
+        listBox.setEditable(true);
+        JScrollPane scrollPane = new JScrollPane(listBox);
         // put them together
         FlowLayout flow = new FlowLayout();
         setLayout(flow);
@@ -35,6 +41,6 @@ public class BlockSplash extends JFrame{
     }
 
     public static void main(String[] arguments) {
-    	BlockSplash st = new BlockSplash();
+    	BlockSplash BL = new BlockSplash();
     }
 }
