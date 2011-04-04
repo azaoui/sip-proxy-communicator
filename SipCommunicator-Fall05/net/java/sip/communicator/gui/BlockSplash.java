@@ -9,6 +9,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import net.java.sip.communicator.SipCommunicator;
 import net.java.sip.communicator.common.*;
 import net.java.sip.communicator.common.Console;
 import net.java.sip.communicator.gui.event.*;
@@ -64,9 +65,10 @@ public class BlockSplash extends JFrame{
     			
     			RequestSocket req = new RequestSocket();
                 req.listenSocket();
-                if (req != null)
-                	req.SendRequest(RequestSocket.BLOCK, "alex", blocked_person); 
-                
+                if (req != null) {
+                	System.out.println( Utils.getProperty("net.java.sip.communicator.sip.USER_NAME") + " and " + blocked_person);
+                	req.SendRequest(RequestSocket.BLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
+                }
     		}
     	});
         
