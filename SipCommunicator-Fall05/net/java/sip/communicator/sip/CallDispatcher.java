@@ -201,12 +201,7 @@ class CallDispatcher
 //================================ DialogListener =================
     public void callStateChanged(CallStateEvent evt)
     {
-    	if (evt.getNewState().equals(Call.CONNECTED)) {
-//    		TimeThreadController.Start(evt.getSourceCall().getID());
-    	}
-        if (evt.getNewState().equals(Call.DISCONNECTED)) {
-  //      	TimeThreadController.Start(evt.getSourceCall().getID());
+        if (evt.getNewState().equals(Call.DISCONNECTED))
         	removeCall(evt.getSourceCall());
-        }
     }
 }

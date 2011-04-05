@@ -73,29 +73,4 @@ public class RequestSocket {
 		return answer;
 	}
 
-	public void SendBillInfo(String UserFrom, String UserTo, Date Start, Date End) throws IOException {
-		console.logEntry();
-
-		ObjectOutputStream obj = new ObjectOutputStream(socket.getOutputStream());
-		out.print(BILL);
-		out.println(UserFrom);
-		out.println(UserTo);
-		obj.writeObject(Start);
-		obj.writeObject(End);
-		
-		try {
-			console.debug(in.readLine());
-		} catch (IOException e) {
-			console.error(e);
-			console.showException(e);
-		}
-
-		try {
-			socket.close();
-		} catch (IOException e) {
-			console.error(e);
-			System.out.println("No I/O");
-		}
-		console.logExit();
-	}
 }
