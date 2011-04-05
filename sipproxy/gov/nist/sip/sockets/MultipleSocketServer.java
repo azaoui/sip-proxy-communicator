@@ -9,21 +9,25 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
 
 public class MultipleSocketServer implements Runnable {
 
+	
 	private Socket connection;
 	private int ID;
-	private static char BLOCK = '1';
-	private static char UNBLOCK = '2';
-	private static char FORWARD = '3';
-	private static char UNFORWARD = '4';
-	private static char BILL = '5';
+	private static final char BLOCK = '1';
+	private static final char UNBLOCK = '2';
+	private static final char FORWARD = '3';
+	private static final char UNFORWARD = '4';
+	private static final char BILL = '5';
+	private static final char BLOCK_LIST = '6';
 
 	 public static void main(String[] args) {
 		int port = 4444;
@@ -57,9 +61,14 @@ public class MultipleSocketServer implements Runnable {
 		try {
 			InputStreamReader isr = new InputStreamReader(connection
 					.getInputStream());
-			ObjectInputStream obj = new ObjectInputStream(connection.getInputStream());
+//			
 			BufferedReader line = new BufferedReader(isr);
 
+			BufferedOutputStream os = new BufferedOutputStream(connection
+					.getOutputStream());
+	//		OutputStreamWriter osw = new OutputStreamWriter(os, "US-ASCII");
+			PrintWriter osw = new PrintWriter(os);
+			
 			String returnCode;
 			StringBuffer process = new StringBuffer();
 
@@ -68,8 +77,8 @@ public class MultipleSocketServer implements Runnable {
 			String ToUser = line.readLine();
 
 			Statement sql = DbConnection.getSql();
-			int ToUserID = DbConnection.findUserID(FromUser);
-			int FromUserID = DbConnection.findUserID(ToUser);
+			int ToUserID = DbConnection.findUserID(ToUser);
+			int FromUserID = DbConnection.findUserID(FromUser);
 			
 			
 			if ((ToUserID == 0) || (FromUserID == 0)) {
@@ -96,9 +105,17 @@ public class MultipleSocketServer implements Runnable {
 					}
 				} else if (request == BILL){
 					// accept request with call info
-					Date start = (Date) obj.readObject();
-					Date end = (Date) obj.readObject();
-					
+				//	ObjectInputStream obj = new ObjectInputStream(connection.getInputStream());
+					System.out.println(FromUser + "ole " + ToUser + " ");
+				//	Date start = (Date) obj.readObject();
+				//	Date end = (Date) obj.readObject();
+					System.out.println(FromUser + "ole " + ToUser + "");
+				} else if (request == BLOCK_LIST) {					
+					ResultSet result1 =  sql.executeQuery("select blockee from block where blocker =" + FromUserID);
+					while (result1.next()){
+						ResultSet result2 =  sql.executeQuery("select username from users where \"ID\" =" + result1.getInt(1));
+						osw.println(result2.getString(1));
+					}
 				}
 
 				System.out.println(process);
@@ -112,18 +129,21 @@ public class MultipleSocketServer implements Runnable {
 				returnCode = "MultipleSocketServer repsonded at " + request;
 			}
 			System.out.println(returnCode);
-			BufferedOutputStream os = new BufferedOutputStream(connection
-					.getOutputStream());
-			OutputStreamWriter osw = new OutputStreamWriter(os, "US-ASCII");
-			osw.write(returnCode);
+			
+			osw.println(returnCode);
+		//	osw.write(returnCode);
 			osw.flush();
 		} catch (Exception e) {
 			System.out.println(e);
 		} finally {
-			try {
-				connection.close();
-			} catch (IOException e) {
-			}
+			
+				try {
+					connection.close();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			
 		}
 	}
 

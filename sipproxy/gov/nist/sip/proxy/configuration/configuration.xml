@@ -2,12 +2,15 @@
 <CONFIGURATION> 
 	<SIP_STACK 
 stack_name="nist-proxy"
-stack_IP_address="192.168.1.50"
+stack_IP_address="147.102.233.107"
 router_path="gov.nist.sip.proxy.router.ProxyRouter"
 max_connections="20"
+max_server_transactions="20"
 thread_pool_size="20"
     >       
 
+<LISTENING_POINT port="5061" transport="tcp" />
+<LISTENING_POINT port="5061" transport="udp" />
 <LISTENING_POINT port="4000" transport="udp" />
 <LISTENING_POINT port="4000" transport="tcp" />
 <DOMAIN domain="there.com" />
