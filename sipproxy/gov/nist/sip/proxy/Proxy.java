@@ -1,7 +1,13 @@
 package gov.nist.sip.proxy;
 
+import gov.nist.javax.sip.header.CallID;
 import gov.nist.javax.sip.header.From;
 import gov.nist.javax.sip.header.To;
+import gov.nist.sip.bill.BillStrategyApply;
+import gov.nist.sip.bill.BillingStrategy;
+import gov.nist.sip.bill.ProcessBill;
+import gov.nist.sip.bill.StandardBillPolicy;
+import gov.nist.sip.bill.TimeThreadController;
 import gov.nist.sip.block.block;
 import gov.nist.sip.proxy.authentication.Authentication;
 import gov.nist.sip.proxy.authentication.AuthenticationMethod;
@@ -9,7 +15,9 @@ import gov.nist.sip.proxy.presenceserver.PresenceServer;
 import gov.nist.sip.proxy.registrar.Registrar;
 import gov.nist.sip.proxy.router.ProxyHop;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
@@ -45,6 +53,8 @@ import javax.sip.header.ViaHeader;
 import javax.sip.message.MessageFactory;
 import javax.sip.message.Request;
 import javax.sip.message.Response;
+
+import com.sun.jmx.snmp.Timestamp;
 
 //ifdef SIMULATION
 /*
@@ -260,9 +270,9 @@ public class Proxy implements SipListener {
 					return;
 				}
 				/* added code */
-/*				CallID call_id = (CallID) request.getHeader(CallID.CALL_ID);
-/*				String call_id_str = call_id.getCallId();
-/*				TimeThreadController.Start(call_id_str);
+				CallID call_id = (CallID) request.getHeader(CallID.CALL_ID);
+				String call_id_str = call_id.getCallId();
+				TimeThreadController.Start(call_id_str);
 				/* end of added code */
 
 			}
@@ -590,19 +600,39 @@ public class Proxy implements SipListener {
 			// BYE. Bye is end-to-end not hop by hop!
 			if (request.getMethod().equals(Request.BYE)) {
 
-				/* added code */
-/*				CallID call_id = (CallID) request.getHeader(CallID.CALL_ID);
-/*				String call_id_str = call_id.getCallId()
-	/*			TimeThreadController.Stop(call_id_str);
-				/* end of added code */
-				
 				if (serverTransaction == null) {
 					if (ProxyDebug.debug)
 						ProxyDebug
-								.println("Proxy, null server transactin for BYE");
+								.println("Proxy, null server transaction for BYE");
 					return;
 				}
 
+				/* added code */
+				CallID call_id = (CallID) request.getHeader(CallID.CALL_ID);
+				String call_id_str = call_id.getCallId();
+				long end_time = TimeThreadController.Stop(call_id_str);
+
+				To tou = (To) request.getHeader(ToHeader.NAME);
+				From fromu = (From) request.getHeader(FromHeader.NAME);
+
+				String FromUser = fromu.getUserAtHostPort();
+				String ToUser = tou.getUserAtHostPort();
+
+				StringBuffer sb = new StringBuffer(FromUser);
+				int endsAt = sb.indexOf("@");
+				String FromUsername = sb.substring(0, endsAt);
+				sb = new StringBuffer(ToUser);
+				endsAt = sb.indexOf("@");
+				String ToUsername = sb.substring(0, endsAt);
+				BillStrategyApply bill = new BillStrategyApply(new StandardBillPolicy());
+				long start_time = TimeThreadController.getStartTime();
+				java.sql.Timestamp s = new java.sql.Timestamp(start_time);
+				System.out.println("START TIME POU BIKE :" + s.toString());
+				BigDecimal cost = bill.executeStrategy(1, 2,start_time, end_time);
+				ProcessBill.updateCallDB(FromUsername, ToUsername, start_time, end_time , cost);
+				
+				
+				/* end of added code */
 
 				Dialog d = serverTransaction.getDialog();
 				TransactionsMapping transactionsMapping = (TransactionsMapping) d
