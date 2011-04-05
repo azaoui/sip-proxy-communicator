@@ -57,8 +57,6 @@
  */
 package net.java.sip.communicator.sip;
 
-import gov.nist.sip.bill.TimeThreadController;
-
 import java.util.*;
 import javax.sip.*;
 import javax.sip.message.*;

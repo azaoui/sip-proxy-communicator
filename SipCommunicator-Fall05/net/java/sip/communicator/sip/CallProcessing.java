@@ -57,21 +57,34 @@
  */
 package net.java.sip.communicator.sip;
 
-import gov.nist.javax.sip.header.From;
-import gov.nist.javax.sip.header.To;
-import gov.nist.sip.bill.CountTime;
-import gov.nist.sip.bill.TimeThreadController;
+import java.text.ParseException;
+import java.util.ArrayList;
 
-import java.io.IOException;
-import java.text.*;
-import java.util.*;
-import javax.sip.*;
-import javax.sip.address.*;
-import javax.sip.header.*;
-import javax.sip.message.*;
-import net.java.sip.communicator.common.*;
+import javax.sip.ClientTransaction;
+import javax.sip.Dialog;
+import javax.sip.InvalidArgumentException;
+import javax.sip.ServerTransaction;
+import javax.sip.SipException;
+import javax.sip.Transaction;
+import javax.sip.TransactionUnavailableException;
+import javax.sip.address.Address;
+import javax.sip.address.SipURI;
+import javax.sip.address.URI;
+import javax.sip.header.CSeqHeader;
+import javax.sip.header.CallIdHeader;
+import javax.sip.header.ContactHeader;
+import javax.sip.header.ContentLengthHeader;
+import javax.sip.header.ContentTypeHeader;
+import javax.sip.header.FromHeader;
+import javax.sip.header.MaxForwardsHeader;
+import javax.sip.header.ToHeader;
+import javax.sip.message.Request;
+import javax.sip.message.Response;
+
+import net.java.sip.communicator.common.Console;
+import net.java.sip.communicator.common.PropertiesDepot;
+import net.java.sip.communicator.common.Utils;
 import net.java.sip.communicator.sip.security.SipSecurityException;
-import net.java.sip.socketclient.RequestSocket;
 
 /**
  * <p>
