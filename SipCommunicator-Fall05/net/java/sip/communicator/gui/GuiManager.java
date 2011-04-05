@@ -114,6 +114,7 @@ public class GuiManager
     private AlertManager     alertManager = null;
     private BlockSplash       blockSplash = null;
     private BillingSplash   billingSplash = null;
+    private ForwardSplash   forwardSplash = null;
     
 /** @todo remove after testing */
 //    private Properties      properties;
@@ -372,6 +373,12 @@ public class GuiManager
     	new BillingSplash();
     }
     
+    void forwardButton_actionPerformed(EventObject evt)
+    {
+    	alertManager.stopAllAlerts();
+    	new ForwardSplash();
+    }
+    
     // !!actionPerformed gia blockButton
     /*void blockButton_actionPerformed(EventObject evt)
     {
@@ -538,6 +545,8 @@ public class GuiManager
             phoneFrame.contactBox.setSelectedItem(voiceMailNumber);
             dialButton_actionPerformed(new EventObject(phoneFrame.dialButton));
             billingButton_actionPerformed(new EventObject(phoneFrame.billingButton));
+            forwardButton_actionPerformed(new EventObject(phoneFrame.forwardButton));
+            
             //blockButton_actionPerformed(new EventObject(blockSplash.blockButton));
         }
 
@@ -671,6 +680,14 @@ public class GuiManager
         	public void actionPerformed(ActionEvent evt)
             {
                 billingButton_actionPerformed(evt);
+            }
+        });
+        
+        phoneFrame.forwardButton.addActionListener(new ActionListener()
+        {
+        	public void actionPerformed(ActionEvent evt)
+            {
+                forwardButton_actionPerformed(evt);
             }
         });
         

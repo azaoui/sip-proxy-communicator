@@ -120,8 +120,8 @@ class PhoneFrame
     JPanel dialPanel = new JPanel();
     JButton dialButton = new JButton();
     JButton billingButton = new JButton();
-    JLabel billingLabel = new JLabel("billing of recent call:   ",SwingConstants.RIGHT);
-    JTextField billingTextField = new JTextField();
+    JButton forwardButton = new JButton();
+    
     JComboBox contactBox = new JComboBox();
 
     public PhoneFrame(GuiManager guiManCallback) //throws HeadlessException
@@ -208,6 +208,11 @@ class PhoneFrame
         dialButton.setMnemonic('D');
         dialButton.setText("Dial");
         
+        forwardButton.setEnabled(true);
+        forwardButton.setMnemonic('F');
+        forwardButton.setText("Forward");
+        
+        
         //billingLabel.setEnabled(true);
         //billingTextField.setEditable(false);
         //billingTextField.setEnabled(true);
@@ -256,9 +261,10 @@ class PhoneFrame
        // dialPanel.add(billingButton,BorderLayout.NORTH);
         dialPanel.add(contactBox);
         dialPanel.add(dialButton);
-        dialPanel.add(billingLabel);
-        dialPanel.add(billingTextField);
         dialPanel.add(billingButton);
+        dialPanel.add(forwardButton);
+        
+        
         
 //        splitPane.setDividerLocation(200);
     }

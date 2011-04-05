@@ -17,7 +17,7 @@ public class BillingSplash {
   public BillingSplash(){ 	
  
     JFrame frame = new JFrame();
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
     DefaultTableModel model = new DefaultTableModel();
     JTable table = new JTable(model);
 
@@ -29,11 +29,18 @@ public class BillingSplash {
     model.addColumn("Cost");
     
     
-    //dimiourgoume tin proti grami kai adistoixa tis epomenes me ton idio tropo
-    //ka8e fora pou 8a teleionei mia klisei prepei na ftiaxnoume kai mia nea grammi. 
-    //Ara ka8e fora pou 8a epistrefoume ton caller,calle,time ,cost 8a ftiaxnoume mia kainouria grammi
-    int cost = 23;
-    model.insertRow(0, new Object[]{"r2","gfg", "dfdf", "fgdgf", cost});
+    
+    // gia dimiourgia grammwn otan paroume ta apotelesmata apo secket.
+    /* 
+    for (int rows=0; rows < (ari8mos grammon apo basi)-1; rows++)
+    {
+    	While ..
+    	{
+    	model.insertRow(rows, new Object[]{callerID,caleeID, Start_time, End_time, cost});
+    	}
+    }
+    */
+    
     
     JScrollPane scrollPane = new JScrollPane(table);
     JPanel costPanel = new JPanel();
