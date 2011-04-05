@@ -51,7 +51,7 @@ public class BlockSplash extends JFrame{
         // create bottom panel
         JPanel textPane = new JPanel();
         //JTextArea text = new JTextArea(4,20);
-       final JComboBox listBox = new JComboBox();
+        final JComboBox listBox = new JComboBox();
         listBox.setBorder(null);
         listBox.setDebugGraphicsOptions(0);
         listBox.setActionMap(null);
