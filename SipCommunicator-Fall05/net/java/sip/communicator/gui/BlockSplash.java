@@ -73,10 +73,10 @@ public class BlockSplash extends JFrame{
                 }
     			
                 if (!response.equals("Either UserFrom or UserTo does not exist.")) {  //user blocked successfully
-       				new WarningBlockSplash(BlockSplash.this, false);	
+       				new WarningBlockSplash(BlockSplash.this, false, "User blocked!");	
        			}
        			else { 
-       				new WarningCannotBeBlocked(BlockSplash.this, false);
+       				new WarningBlockSplash(BlockSplash.this, false, "No such user!");
        			}
     		}
     	});
@@ -95,10 +95,10 @@ public class BlockSplash extends JFrame{
                 }
                 
                 if (!response.equals("Either UserFrom or UserTo does not exist.")) {  //user blocked successfully
-       				new WarningBlockSplash(BlockSplash.this, false);	
+       				new WarningBlockSplash(BlockSplash.this, false, "User Unblocked!");	
        			}
        			else { 
-       				new WarningCannotBeBlocked(BlockSplash.this, false);
+       				new WarningBlockSplash(BlockSplash.this, false, "No such user");
        			}
     		}
     	});

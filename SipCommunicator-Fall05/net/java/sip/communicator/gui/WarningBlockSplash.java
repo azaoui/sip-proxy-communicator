@@ -39,7 +39,7 @@ public class WarningBlockSplash extends JDialog{
 	private BlockSplash  blockSplash  = null;
 	
 	
-	public WarningBlockSplash(BlockSplash blockSplash2, boolean modal){
+	public WarningBlockSplash(BlockSplash blockSplash2, boolean modal, String warning){
 
 		super(blockSplash2, modal);
         setSize(250, 90);
@@ -48,7 +48,7 @@ public class WarningBlockSplash extends JDialog{
         // create top panel
         JPanel pane = new JPanel();
         
-        JLabel label = new JLabel("User blocked!" );
+        JLabel label = new JLabel(warning );
         JButton okButton = new JButton("OK!");
         pane.add(label);
         pane.add(okButton); 
