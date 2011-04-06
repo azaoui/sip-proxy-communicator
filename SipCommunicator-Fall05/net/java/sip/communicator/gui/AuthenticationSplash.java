@@ -356,6 +356,7 @@ public class AuthenticationSplash
     			 new RegisterSplash(AuthenticationSplash.this, false);
     			 
     			// setVisible(false);
+    			 
     			}
     	});
         buttonPanel.add(registerButton);

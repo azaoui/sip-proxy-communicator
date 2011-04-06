@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableModel;
 
+import net.java.sip.socketclient.RequestSocket;
+
 public class BillingSplash {
 	
   public BillingSplash(){ 	
@@ -29,14 +31,16 @@ public class BillingSplash {
     model.addColumn("Cost");
     
     
-    
+   // RequestSocket req = new RequestSocket();
+   // req.listenSocket();
+   // int rows = req.SendRequest(req.BILL, UserFrom, UserTo);
     // gia dimiourgia grammwn otan paroume ta apotelesmata apo secket.
     /* 
     for (int rows=0; rows < (ari8mos grammon apo basi)-1; rows++)
     {
     	While ..
     	{
-    	model.insertRow(rows, new Object[]{callerID,caleeID, Start_time, End_time, cost});
+    	model.insertRow(rows, new Object[]{in.readLine(),caleeID, Start_time, End_time, cost});
     	}
     }
     */
