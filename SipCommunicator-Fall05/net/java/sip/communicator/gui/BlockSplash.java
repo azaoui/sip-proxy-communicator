@@ -57,10 +57,19 @@ public class BlockSplash extends JFrame{
         listBox.setActionMap(null);
         listBox.setEditable(true);
         JScrollPane scrollPane = new JScrollPane(listBox);
-        
+        //MONO GIA ELEGXO AN DOULEVEI TO SPLASH
+        final int test = 2;
         blockButton.addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent e) {
-    			//new BillingSplash();
+    			if (test==1) {  //user blocked successfully
+    			 String blocked_person = listBox.getSelectedItem().toString();
+    				new WarningBlockSplash(BlockSplash.this, false);	
+    			}
+    			else { 
+    				new WarningCannotBeBlocked(BlockSplash.this, false);
+    			}
+    			
+    			/*
     			String blocked_person = listBox.getSelectedItem().toString();
     			
     			RequestSocket req = new RequestSocket();
@@ -69,6 +78,7 @@ public class BlockSplash extends JFrame{
                 	System.out.println( Utils.getProperty("net.java.sip.communicator.sip.USER_NAME") + " and " + blocked_person);
                 	req.SendRequest(RequestSocket.BLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
                 }
+    			*/
     		}
     	});
         
