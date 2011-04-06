@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.Date;
 
+import org.postgresql.util.PGmoney;
+
 public class ProcessBill {
 	public static void updateCallDB(String FromUser, String ToUser, long l, long endTime, BigDecimal cost){
 		try {
@@ -17,7 +19,7 @@ public class ProcessBill {
 			java.sql.Timestamp start_time = new java.sql.Timestamp(l);
 			java.sql.Timestamp end_time = new java.sql.Timestamp(endTime);
 			
-			sql.executeUpdate("insert into call (caller, callee, start_date, end_date, cost) values (" + FromUserID + "," + ToUserID + ",'" + start_time + "','" + end_time + "'," + cost + ")");
+			sql.executeUpdate("insert into call (caller, callee, start_time, end_time, cost) values (" + FromUserID + "," + ToUserID + ",'" + start_time + "','" + end_time + "'," + cost + ")");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

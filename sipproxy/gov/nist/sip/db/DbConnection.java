@@ -32,8 +32,9 @@ public class DbConnection {
 	// get the connection pointer for every use
 	public static Statement getSql() throws SQLException {
 		Connection conn = DbConnection(
-				"jdbc:postgresql://127.0.0.1:5432/sip_db", "postgres", "root");
-		Statement sql = conn.createStatement();
+				"jdbc:postgresql://127.0.0.1:5432/sip_db4", "postgres", "root");
+		Statement sql = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, 
+				ResultSet.CONCUR_UPDATABLE); 
 		return sql;
 	}
 
@@ -53,6 +54,25 @@ public class DbConnection {
 			System.out.println("sql error");
 			e.printStackTrace();
 			return 0;
+		} 
+	}
+	
+	public static String findUsername(int id) throws SQLException {
+		Statement sql = getSql();
+		ResultSet result = null;
+		try {
+			result = sql.executeQuery("select username from users where \"ID\" =" + id );
+			if (result.next()) {
+				String response = result.getString("username");
+				result.close();
+				return response;
+			} else {
+				return null;
+			}
+		} catch (SQLException e) {
+			System.out.println("sql error");
+			e.printStackTrace();
+			return null;
 		} 
 	}
 
