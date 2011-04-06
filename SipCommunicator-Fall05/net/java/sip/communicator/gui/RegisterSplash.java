@@ -84,12 +84,18 @@ public class RegisterSplash extends JFrame{
     			String userName = usernameTextField.getText();
     			char[] password = passwordField.getPassword();
     			
+    			String pass = "" ;
+                int i;
+                for (i = 0; i < password.length; i++) {
+                	pass += password[i];
+                }
+    			
     			
     			RequestSocket req = new RequestSocket();
                 req.listenSocket();
                 if (req != null) {
                 	
-                	req.SendRequest(RequestSocket.REGISTER, userName, password); 
+                	req.SendRequest(RequestSocket.REGISTER, userName, pass); 
               
                 }
                 authenticationSplash.setVisible(true);
