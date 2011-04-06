@@ -27,4 +27,5 @@
     <REGISTRATION  displayName="Deruelle " uri="sip:deruelle@nist.gov" >
 	<BUDDY     uri = "sip:mranga@nist.gov" />
     </REGISTRATION>
+    
 </REGISTRATIONS> 
