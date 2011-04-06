@@ -20,6 +20,7 @@ public class RequestSocket {
 	public static char FORWARD = '3';
 	public static char UNFORWARD = '4';
 	public static char BILL = '5';
+	public static char LOGIN = '7';
 
 	protected String registrarAddress = null;
 	PrintWriter out;
