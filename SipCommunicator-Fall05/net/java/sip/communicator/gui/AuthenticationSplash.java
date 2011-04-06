@@ -63,6 +63,8 @@ import java.awt.geom.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
+
+import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import net.java.sip.communicator.common.*;
@@ -128,7 +130,7 @@ public class AuthenticationSplash
     	
         super(parent, modal);
         initResources();
-        initComponents();
+        initComponents(parent);
         pack();
         centerWindow();
     }
@@ -178,8 +180,9 @@ public class AuthenticationSplash
      * labels to what they are labeling. This allows mnemonics to work
      * and assistive to technologies used by persons with disabilities
      * to provide much more useful information to the user.
+     * @param parent 
      */
-    private void initComponents()
+    private void initComponents(final Frame parent)
     {
         Container contents = getContentPane();
         contents.setLayout(new BorderLayout());
@@ -350,9 +353,9 @@ public class AuthenticationSplash
         registerButton.setActionCommand(CMD_LOGIN);
         registerButton.addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent e) {
-    			 new RegisterSplash();
+    			 new RegisterSplash(AuthenticationSplash.this, false);
     			 
-    			 setVisible(false);
+    			// setVisible(false);
     			}
     	});
         buttonPanel.add(registerButton);

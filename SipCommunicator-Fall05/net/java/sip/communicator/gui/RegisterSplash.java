@@ -5,8 +5,10 @@ package net.java.sip.communicator.gui;
 import javax.swing.UIManager;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 
+import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -15,6 +17,7 @@ import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -29,7 +32,7 @@ import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
 import net.java.sip.communicator.common.Utils;
 import net.java.sip.socketclient.RequestSocket;
 
-public class RegisterSplash extends JFrame{
+public class RegisterSplash extends JDialog{
 	
 	
 	private JButton registerButton;
@@ -41,9 +44,9 @@ public class RegisterSplash extends JFrame{
 	private AuthenticationSplash   authenticationSplash = null;
 	
 	
-	public RegisterSplash(){
+	public RegisterSplash(Dialog parent, boolean modal){
 
-        super("New User Registration");
+		super(parent, modal);
         setSize(350, 150);
         setResizable(false);
         //setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -98,7 +101,7 @@ public class RegisterSplash extends JFrame{
                 	req.SendRequest(RequestSocket.REGISTER, userName, pass); 
               
                 }
-                authenticationSplash.setVisible(true);
+           //     authenticationSplash.setVisible(true);
                 setVisible(false);
                 dispose();
     		}
@@ -141,6 +144,6 @@ public class RegisterSplash extends JFrame{
     }
 
     public static void main(String[] arguments) {
-    	RegisterSplash RS = new RegisterSplash();
+//    	RegisterSplash RS = new RegisterSplash();
     }
 }
