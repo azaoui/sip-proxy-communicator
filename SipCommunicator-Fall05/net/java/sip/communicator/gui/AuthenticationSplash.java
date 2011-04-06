@@ -65,8 +65,8 @@ import java.util.*;
 import javax.swing.*;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
-import net.java.sip.communicator.common.Utils;
 import net.java.sip.communicator.common.*;
+import net.java.sip.socketclient.RequestSocket;
 
 //import samples.accessory.StringGridBagLayout;
 
@@ -440,6 +440,9 @@ public class AuthenticationSplash
     private void dialogDone(Object actionCommand)
     {
         String cmd = null;
+        String request_answer = null;
+        RequestSocket req = new RequestSocket();
+        
         if (actionCommand != null) {
             if (actionCommand instanceof ActionEvent) {
                 cmd = ( (ActionEvent) actionCommand).getActionCommand();
@@ -454,6 +457,8 @@ public class AuthenticationSplash
         else if (cmd.equals(CMD_CANCEL)) {
             userName = null;
             password = null;
+            setVisible(false);
+            dispose();
         }
         else if (cmd.equals(CMD_HELP)) {
             System.out.println("your help code here...");
@@ -461,9 +466,23 @@ public class AuthenticationSplash
         else if (cmd.equals(CMD_LOGIN)) {
             userName = userNameTextField.getText();
             password = passwordTextField.getPassword();
+            //added code
+            String pass = "" ;
+            int i;
+            for (i = 0; i < password.length; i++) {
+            	pass += password[i];
+            }
+            req.listenSocket();
+            request_answer = req.SendRequest(req.LOGIN, userName, pass);
+            //end of added code
         }
-        setVisible(false);
-        dispose();
+        if (request_answer.equals("MultipleSocketServer repsonded at " + req.LOGIN)) {
+        	setVisible(false);
+        	dispose();
+        } else {
+        	//dispose();
+        }
+        //end of added code
     } // dialogDone()
 
     /**
