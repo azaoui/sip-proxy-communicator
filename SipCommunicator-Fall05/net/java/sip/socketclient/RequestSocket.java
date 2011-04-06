@@ -77,5 +77,27 @@ public class RequestSocket {
 		console.logExit();
 		return answer;
 	}
+	
+	public BufferedReader getBillInfo(String User) {
+		out.print(BILL);
+		out.println(User);
+		out.println(User);
+		return in;
+	}
+	
+	public Socket getSocket() {
+		return socket;
+	}
+	
+	public void CloseSocket(Socket socket) {
+		try {
+			if (socket.isConnected()){ 
+			socket.close();
+			}
+		} catch (IOException e) {
+			console.error(e);
+			System.out.println("No I/O");
+		}
+	}
 
 }

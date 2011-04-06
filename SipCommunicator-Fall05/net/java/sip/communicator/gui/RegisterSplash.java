@@ -41,8 +41,6 @@ public class RegisterSplash extends JDialog{
 	private  JTextField usernameTextField;
 	private JLabel passwordLabel;
 	private  JPasswordField passwordField;
-	private AuthenticationSplash   authenticationSplash = null;
-	
 	
 	public RegisterSplash(Dialog parent, boolean modal){
 
