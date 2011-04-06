@@ -61,24 +61,23 @@ public class BlockSplash extends JFrame{
         final int test = 2;
         blockButton.addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent e) {
-    			if (test==1) {  //user blocked successfully
-    			 String blocked_person = listBox.getSelectedItem().toString();
-    				new WarningBlockSplash(BlockSplash.this, false);	
-    			}
-    			else { 
-    				new WarningCannotBeBlocked(BlockSplash.this, false);
-    			}
     			
-    			/*
     			String blocked_person = listBox.getSelectedItem().toString();
+    			String response = null;
     			
     			RequestSocket req = new RequestSocket();
                 req.listenSocket();
                 if (req != null) {
                 	System.out.println( Utils.getProperty("net.java.sip.communicator.sip.USER_NAME") + " and " + blocked_person);
-                	req.SendRequest(RequestSocket.BLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
+                	response = req.SendRequest(RequestSocket.BLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
                 }
-    			*/
+    			
+                if (!response.equals("Either UserFrom or UserTo does not exist.")) {  //user blocked successfully
+       				new WarningBlockSplash(BlockSplash.this, false);	
+       			}
+       			else { 
+       				new WarningCannotBeBlocked(BlockSplash.this, false);
+       			}
     		}
     	});
         
@@ -86,13 +85,21 @@ public class BlockSplash extends JFrame{
     		public void actionPerformed(ActionEvent e) {
     			//new BillingSplash();
     			String blocked_person = listBox.getSelectedItem().toString();
+    			String response = null;
     			
     			RequestSocket req = new RequestSocket();
                 req.listenSocket();
                 if (req != null) {
                 	System.out.println( Utils.getProperty("net.java.sip.communicator.sip.USER_NAME") + " and " + blocked_person);
-                	req.SendRequest(RequestSocket.UNBLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
+                	response = req.SendRequest(RequestSocket.UNBLOCK, Utils.getProperty("net.java.sip.communicator.sip.USER_NAME"), blocked_person); 
                 }
+                
+                if (!response.equals("Either UserFrom or UserTo does not exist.")) {  //user blocked successfully
+       				new WarningBlockSplash(BlockSplash.this, false);	
+       			}
+       			else { 
+       				new WarningCannotBeBlocked(BlockSplash.this, false);
+       			}
     		}
     	});
         
