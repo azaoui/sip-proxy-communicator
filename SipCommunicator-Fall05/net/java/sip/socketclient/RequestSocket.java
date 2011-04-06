@@ -21,6 +21,7 @@ public class RequestSocket {
 	public static char UNFORWARD = '4';
 	public static char BILL = '5';
 	public static char LOGIN = '7';
+	public static char REGISTER = '8';
 
 	protected String registrarAddress = null;
 	PrintWriter out;
