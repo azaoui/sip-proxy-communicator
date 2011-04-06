@@ -76,6 +76,7 @@ import net.java.sip.socketclient.RequestSocket;
 public class AuthenticationSplash
     extends JDialog
 {
+	private RegisterSplash   registerSplash = null;
     String userName = null;
     char[] password = null;
     JTextField userNameTextField = null;
@@ -117,12 +118,14 @@ public class AuthenticationSplash
     private JButton loginButton = null;
     private JButton cancelButton = null;
     private JButton helpButton = null;
+    private JButton registerButton = null;
 
     /**
      * Creates new form AuthenticationSplash
      */
     public AuthenticationSplash(Frame parent, boolean modal)
     {
+    	
         super(parent, modal);
         initResources();
         initComponents();
@@ -340,6 +343,23 @@ public class AuthenticationSplash
 
         // space
         buttonPanel.add(Box.createRigidArea(new Dimension(5, 0)));
+        
+        //register Button
+        registerButton = new JButton();
+        registerButton.setText("Register");
+        registerButton.setActionCommand(CMD_LOGIN);
+        registerButton.addActionListener(new ActionListener() {
+    		public void actionPerformed(ActionEvent e) {
+    			 new RegisterSplash();
+    			 
+    			 setVisible(false);
+    			}
+    	});
+        buttonPanel.add(registerButton);
+
+        // space
+        buttonPanel.add(Box.createRigidArea(new Dimension(5, 0)));
+        
 
         cancelButton = new JButton();
         cancelButton.setText("Cancel");
