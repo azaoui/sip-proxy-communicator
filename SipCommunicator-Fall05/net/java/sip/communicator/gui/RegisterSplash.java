@@ -101,7 +101,6 @@ public class RegisterSplash extends JDialog{
                 	req.SendRequest(RequestSocket.REGISTER, userName, pass); 
               
                 }
-           //     authenticationSplash.setVisible(true);
                 setVisible(false);
                 dispose();
     		}
@@ -109,12 +108,8 @@ public class RegisterSplash extends JDialog{
         
         cancelButton.addActionListener(new ActionListener() {
     		public void actionPerformed(ActionEvent e) {
-    			
-    			authenticationSplash.setVisible(true);
                 setVisible(false);
-                dispose();
-    			 
-                
+                dispose();  
     		}
     	});
         

@@ -34,9 +34,12 @@ public class RequestSocket {
 	public void listenSocket() {
 		// Create socket connection
 		try {
-			registrarAddress = Utils.getProperty("javax.sip.IP_ADDRESS");
-
-			socket = new Socket(registrarAddress, port);
+			registrarAddress = Utils.getProperty("javax.sip.OUTBOUND_PROXY");
+			StringBuffer sb = new StringBuffer(registrarAddress);
+			int endsAt = sb.indexOf(":");
+			String socket_address = sb.substring(0, endsAt);
+			
+			socket = new Socket(socket_address, port);
 			out = new PrintWriter(socket.getOutputStream(), true);
 			in = new BufferedReader(new InputStreamReader(socket
 					.getInputStream()));
