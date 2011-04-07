@@ -88,12 +88,16 @@ public class MultipleSocketServer implements Runnable {
 					System.out.println(password);
 					request = FALSE;
 				}
+				returnCode = "MultipleSocketServer repsonded at "
+					+ (char) request;
 				
 			} else if (request == REGISTER) {
 				System.out.println("bika stin REGISTEEER");
 				String username = line.readLine();
 				String password = line.readLine();
 				sql.executeUpdate("insert into users(username,password) values('" + username + "','" + password + "')");
+				returnCode = "MultipleSocketServer repsonded at "
+					+ (char) request;
 			} else {
 				String FromUser = line.readLine();
 				String ToUser = line.readLine();
@@ -152,6 +156,8 @@ public class MultipleSocketServer implements Runnable {
 							osw.println(result2.getString(1));
 						}
 					}
+					returnCode = "MultipleSocketServer repsonded at "
+						+ (char) request;
 				}
 				System.out.println(process);
 				// need to wait 10 seconds to pretend that we're processing
@@ -161,8 +167,7 @@ public class MultipleSocketServer implements Runnable {
 				// } catch (Exception e) {
 				// }
 			}
-				returnCode = "MultipleSocketServer repsonded at "
-						+ (char) request;
+				
 			
 			System.out.println(returnCode);
 
